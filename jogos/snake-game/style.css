@@ -1,10 +1,10 @@
 body{
     height: 95vh;
     width: 95;
-    display: flex;
+   /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: column;*/
     color: rgb(3, 92, 3);
 }
 .box{
