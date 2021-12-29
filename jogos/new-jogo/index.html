@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEW ENGINE MMD</title>
-
+    <script src="sprite.js"></script>
     <style>
         canvas {
             position: absolute;
@@ -23,7 +23,7 @@
 <body>
     <script>
         var canvas, contexto, ALTURA, LARGURA, frames = 0, maxPulos = 3, velocidade = 6,
-            estadoAtual,
+            estadoAtual, record, img,
 
             estados = {
                 jogar: 0,
@@ -32,29 +32,39 @@
             },
             chao = {
                 y: 550,
+                x: 0,
                 altura: 50,
-                cor: "#e8da78",
+
+                atualiza: function () {
+                    this.x -= velocidade;
+                    if (this.x <= -30) {
+                        this.x = 0;
+                    }
+                },
+
 
                 desenha: function () {
-                    contexto.fillStyle = this.cor;
-                    contexto.fillRect(0, this.y, LARGURA, this.altura);
+                    spriteChao.desenha(this.x, this.y);
+                    spriteChao.desenha(this.x + spriteChao.largura, this.y);
                 }
             },
             bloco = {
                 x: 50,
                 y: 0,
-                altura: 50,
-                largura: 50,
-                cor: "#ff9239",
+                altura: spriteBoneco.altura,
+                largura: spriteBoneco.largura,
+
                 gravidade: 1.6,
                 velocidade: 0,
                 forcaDoPulo: 23.6,
                 qntPulos: 0,
                 score: 0,
+                rotacao: 0,
 
                 atualiza: function () {
                     this.velocidade += this.gravidade;
                     this.y += this.velocidade;
+                    this.rotacao += Math.PI / 180 * velocidade;
 
                     if (this.y > chao.y - this.altura && estadoAtual != estados.perdeu) {
                         this.y = chao.y - this.altura
@@ -74,13 +84,20 @@
                 reset: function () {
                     this.velocidade = 0;
                     this.y = 0;
+
+                    if (this.score > record) {
+                        localStorage.setItem("record", this.score);
+                        record = this.score;
+                    }
                     this.score = 0;
                 },
 
                 desenha: function () {
-                    contexto.fillStyle = this.cor;
-                    contexto.fillRect(this.x, this.y, this.largura, this.altura);
-
+                    contexto.save();
+                    contexto.translate(this.x + this.largura / 2, this.y + this.altura / 2)
+                    contexto.rotate(this.rotacao);
+                    spriteBoneco.desenha(-this.largura / 2, -this.altura / 2);
+                    contexto.restore();
                 }
             },
             obstaculos = {
@@ -110,7 +127,7 @@
                         if (bloco.x < obs.x + obs.largura && bloco.x + bloco.largura >= obs.x && bloco.y + bloco.altura >= chao.y - obs.altura) {
                             estadoAtual = estados.perdeu;
                         }
-                        else if(obs.x == 0){
+                        else if (obs.x == 0) {
                             bloco.score++;
 
                         }
@@ -166,6 +183,13 @@
             document.addEventListener("mousedown", clique);
 
             estadoAtual = estados.jogar;
+            record = localStorage.getItem("record");
+            if (record == null)
+                record = 0;
+
+            img = new Image();
+            img.src = "img/sheet.png";
+
             roda();
         }
 
@@ -177,7 +201,7 @@
         }
 
         function atualiza() {
-            frames++;
+            chao.atualiza();
             bloco.atualiza();
             if (estadoAtual == estados.jogando) {
                 obstaculos.atualiza();
@@ -187,39 +211,73 @@
 
         }
         function desenha() {
-            contexto.fillStyle = "#80daff";
-            contexto.fillRect(0, 0, LARGURA, ALTURA);
+            //contexto.fillStyle = "#80daff";
+            //contexto.fillRect(0, 0, LARGURA, ALTURA);
+
+            bg.desenha(0, 0);
+            //só teste spriteBoneco.desenha(50, 50);
+
             contexto.fillStyle = "#fff";
             contexto.font = "50px Arial";
             contexto.fillText(bloco.score, 30, 68);
-
-            if (estadoAtual == estados.jogar) {
-                contexto.fillStyle = "green";
-                contexto.fillRect(LARGURA / 2 - 50, ALTURA / 2 - 50, 100, 100);
-            }
-            else if (estadoAtual == estados.perdeu) {
-                contexto.fillStyle = "red";
-                contexto.fillRect(LARGURA / 2 - 50, ALTURA / 2 - 50, 100, 100);
-
-                contexto.save();
-                contexto.translate(LARGURA / 2, ALTURA /2);
-                contexto.fillStyle = "#fff";
-                if(bloco.score < 10)
-                contexto.fillText(bloco.score, -13, 19);
-
-                else if (bloco.score >= 10 && bloco.score < 100)
-                    contexto.fillText(bloco.score, -26, 19)
-                else
-                    contexto.fillText(bloco.score, -39, 19)
-                contexto.restore();
-            }
-            else if (estadoAtual == estados.jogando) {
+            if (estadoAtual == estados.jogando) {
                 obstaculos.desenha();
             }
-
             chao.desenha();
-
             bloco.desenha();
+            if (estadoAtual == estados.jogar)
+                jogar.desenha(LARGURA / 2 - jogar.largura / 2, ALTURA / 2 - jogar.altura / 2)
+
+            if (estadoAtual == estados.perdeu) {
+                perdeu.desenha(LARGURA / 2 - perdeu.largura / 2, ALTURA / 2 - perdeu.altura / 2 - spriteRecord.altura / 2);
+
+                spriteRecord.desenha(LARGURA / 2 - spriteRecord.largura / 2, ALTURA / 2 + perdeu.altura / 2 - spriteRecord.altura / 2 - 25);
+                contexto.fillStyle = "#fff";
+                contexto.fillText(bloco.score, 375, 390);
+
+                if (bloco.score > record) {
+                    novo.desenha(LARGURA / 2 - 180, ALTURA / 2 + 30);
+                    contexto.fillText(bloco.score, 420, 470);
+                } else {
+                    contexto.fillText(bloco.score, 420, 470);
+                }
+            }
+            /* else if (estadoAtual == estados.jogar) {
+                 contexto.fillStyle = "green";
+                 contexto.fillRect(LARGURA / 2 - 50, ALTURA / 2 - 50, 100, 100);
+             }
+             else if (estadoAtual == estados.perdeu) {
+                 contexto.fillStyle = "red";
+                 contexto.fillRect(LARGURA / 2 - 50, ALTURA / 2 - 50, 100, 100);
+ 
+                 contexto.save();
+                 contexto.translate(LARGURA / 2, ALTURA / 2);
+                 contexto.fillStyle = "#fff";
+ 
+                 if (bloco.score > record)
+                     contexto.fillText("Novo Record!", -150, -65)
+ 
+                 else if (record < 10)
+                     contexto.fillText("Record " + record, -99, -65)
+ 
+                 else if (record >= 10 && record < 100)
+                     contexto.fillText("Record " + record, -112, -65)
+                    
+                 else
+                     contexto.fillText("Record " + record, -125, -65)
+ 
+                 if (bloco.score < 10)
+                     contexto.fillText(bloco.score, -13, 19);
+ 
+                 else if (bloco.score >= 10 && bloco.score < 100)
+                     contexto.fillText(bloco.score, -26, 19)
+                 else
+                     contexto.fillText(bloco.score, -39, 19)
+                 contexto.restore();
+             }
+             */
+
+
 
         }
         // inicializar
