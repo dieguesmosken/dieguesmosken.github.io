@@ -6,6 +6,6 @@
 [link portifolio](https://dieguesmosken.github.io/)
 
 
-![pagina inicial](assets/img/index.png?raw=true)
+![pagina inicial](assets/Img/index.png?raw=true)
 
 
