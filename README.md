@@ -5,7 +5,4 @@
 
 [link portifolio](https://dieguesmosken.github.io/)
 
-
-![pagina inicial](assets/Img/index.png?raw=true)
-
-
+[[https://github.com/dieguesmosken/dieguesmosken.github.io/blob/main/assets/Img/index.png?raw=true |alt=imagemindex]]
