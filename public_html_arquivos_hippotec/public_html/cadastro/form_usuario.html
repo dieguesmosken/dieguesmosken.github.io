@@ -1,0 +1,70 @@
+<DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Cadastro</title>
+		    <!-- Bootstrap -->
+			<link href="css/bootstrap.css" rel="stylesheet">
+			<!-- Estilos Customizados -->
+		   <link href="css/signin.css" rel="stylesheet">
+		   <style type="text/css">
+
+			body{
+		  /*background-image: url("imagens/423148.jpg")
+		  background-image: url("imagens/543102.jpg")*/
+		  background-image: url("imagens/543917.jpg")
+		  
+			}
+		</style>
+
+		
+	</head>
+	<body>
+		<div class="container">
+
+			<form class="formuser">
+				<h2 class="form-user-heading">Cadastrar Usuário</h2>
+					<label for="inputnome" class="sr-only">Nome</label>
+					<input type="text" id="inputnome" class="form-control" name="name" placeholder="Nome Completo" required autofocus>
+					<label for="inputemail" class="sr-only">E-mail</label>
+					<input type="email" id="inputemail" class="form-control" name="email" placeholder="Seu Melhor E-mail" required>
+					<label for="inputsenha" class="sr-only">Senha</label>
+					<input type="password" id="inputsenha" class="form-control" name="senha" placeholder="Uma senha Facil"  required>
+					<label for="enviar" class="sr-only">E-mail</label>
+					<button class="btn btn-lg btn-primary btn-block" type="submit" onclick="validar()">Enviar</button>
+			</form>
+		</div>
+		
+		<script type="text/javascript">
+			function validar(){
+				var nome = formuser.nome.value;
+				var email = formuser.email.value;
+				var senha = formuser.senha.value;
+				
+				if(nome == ""){
+					alert('Preencha o campo nome.');
+					formuser.nome.focus();
+					return false;
+				}
+				
+				if(email == "" || email.indexOf('@') == -1 ){
+					alert('Preencha o campo E-mail.');
+					formuser.email.focus();
+					return false;
+				}
+				
+				if(senha == "" || senha.length <= 5){
+					alert('Preencha o campo senha com minimo 6 caracteres');
+					formuser.senha.focus();
+					return false;
+				}
+			}
+		</script>
+		    <!-- jQuery (necessario para plugins Bootstrap's JavaScript ) -->
+			<script src="js/jquery.min.js"></script>
+			<!-- Inclua todos os plugins compilados (abaixo) ou inclua arquivos individuais conforme necessário -->
+			<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
