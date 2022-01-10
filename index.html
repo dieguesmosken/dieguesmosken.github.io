@@ -7,367 +7,387 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script>
-  
 </script>
 <style>
-  body::-webkit-scrollbar {
-  width: 12px;               /* width of the entire scrollbar */
-}
-
-body::-webkit-scrollbar-track {
-  background: grey;        /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: black;    /* color of the scroll thumb */
-  border-radius: 20px;       /* roundness of the scroll thumb */
-  border: 3px solid gray;  /* creates padding around scroll thumb */
-}
-  body,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-family: "Montserrat", sans-serif;
-
-  }
-
-  .w3-row-padding img {
-    margin-bottom: 12px
-  }
-
-  /* Mudar a largura da barra lateral para 120px */
-  .w3-sidebar {
-    width: 120px;
-    background: #222;
-  }
-
-  /* Adicionar uma margem esquerda ao "conteúdo da página" que corresponda à largura da barra lateral (120px) */
-  #main {
-    margin-left: 120px
-  }
-
-  /* Remover as margens do "conteúdo da página" nas telas pequenas */
-  @media only screen and (max-width: 600px) {
-    #main {
-      margin-left: 0
+    body::-webkit-scrollbar {
+        width: 12px;
+        /* width of the entire scrollbar */
     }
-  }
+    
+    body::-webkit-scrollbar-track {
+        background: grey;
+        /* color of the tracking area */
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background-color: black;
+        /* color of the scroll thumb */
+        border-radius: 20px;
+        /* roundness of the scroll thumb */
+        border: 3px solid gray;
+        /* creates padding around scroll thumb */
+    }
+    
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Montserrat", sans-serif;
+    }
+    
+    .w3-row-padding img {
+        margin-bottom: 12px
+    }
+    /* Mudar a largura da barra lateral para 120px */
+    
+    .w3-sidebar {
+        width: 120px;
+        background: #222;
+    }
+    /* Adicionar uma margem esquerda ao "conteúdo da página" que corresponda à largura da barra lateral (120px) */
+    
+    #main {
+        margin-left: 120px
+    }
+    /* Remover as margens do "conteúdo da página" nas telas pequenas */
+    
+    @media only screen and (max-width: 600px) {
+        #main {
+            margin-left: 0
+        }
+    }
 </style>
+<script>
+    setInterval(function() {
+
+        let novaHora = new Date();
+
+        let hora = novaHora.getHours(); // getHours trará a hora
+        let minuto = novaHora.getMinutes(); // geMinutes trará os minutos
+        let segundo = novaHora.getSeconds(); // getSeconds trará os segundos
+        // Chamamos a função zero para que ela retorne a concatenação
+        // com os minutos e segundos
+        minuto = zero(minuto);
+        segundo = zero(segundo);
+        // Com o textContent, iremos inserir as horas, minutos e segundos
+        // no nosso elemento HTML
+        document.getElementById('hora').textContent = hora + ':' + minuto;
+    }, 1000)
+
+    function zero(x) {
+        if (x < 10) {
+            x = '0' + x;
+        }
+        return x;
+    }
+</script>
 
 <body class="w3-black">
 
-  <!-- Barra de Icones (Barra Leteral - Oculto em telas pequenas) -->
-  <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-    <!-- Avatar imagem no canto superior esquerdo -->
+    <!-- Barra de Icones (Barra Leteral - Oculto em telas pequenas) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+        <!-- Avatar imagem no canto superior esquerdo -->
 
-    <h1 style="padding: 0.5cm;color: orangered;">&lt;/&gt;</h1>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
-      <i class="fa fa-home w3-xxlarge"></i>
-      <p>HOME</p>
-    </a>
-    <a href="#about"  class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i class="fa fa-user w3-xxlarge"></i>
-      <p>SOBRE</p>
-    </a>
-    <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i class="fa fa-camera w3-xxlarge"></i>
-      <p>FOTOS</p>
-    </a>
+        <h1 id="hora" style="padding: 0.5cm;color: orangered;">&lt;/&gt;</h1>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+            <i class="fa fa-home w3-xxlarge"></i>
+            <p>HOME</p>
+        </a>
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-user w3-xxlarge"></i>
+            <p>SOBRE</p>
+        </a>
+        <a href="#photos" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-camera w3-xxlarge"></i>
+            <p>FOTOS</p>
+        </a>
 
 
-    <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      </i><i class="fa fa-book w3-xxlarge"></i>
-      <p>PROJETOS</p>
-    </a>
-    
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-      <i class="fa fa-envelope w3-xxlarge"></i>
-      <p>CONTATO</p>
-    </a>
+        <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            </i><i class="fa fa-book w3-xxlarge"></i>
+            <p>PROJETOS</p>
+        </a>
 
-  </nav>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-envelope w3-xxlarge"></i>
+            <p>CONTATO</p>
+        </a>
 
-  <!-- Barra de Navegação Em telas pequenas (Oculta em Telas Medias e Largas) -->
-  <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-      <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
-      <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">SOBRE</a>
-      <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">FOTOS</a>
-      <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">PROJETOS</a>
-      <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTATO</a>
+    </nav>
+
+    <!-- Barra de Navegação Em telas pequenas (Oculta em Telas Medias e Largas) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">SOBRE</a>
+            <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">FOTOS</a>
+            <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">PROJETOS</a>
+            <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTATO</a>
+        </div>
     </div>
-  </div>
 
-  <!-- Conteudo da Pagina -->
-  <div class="w3-padding-large" id="main">
+    <!-- Conteudo da Pagina -->
+    <div class="w3-padding-large" id="main">
 
-    <!-- Cabeçalho/Inicio -->
-    <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-      <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> Matheus M. Diegues.</h1>
-      <p>Programador e Web Designer.</p>
-      <img src="assets/Img/Users/matheus.jpg?raw=true" alt="boy" class="w3-image" width="30%" height="30%">
-    </header>
+        <!-- Cabeçalho/Inicio -->
+        <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+            <h1 class="w3-jumbo"><span class="w3-hide-small">I'm</span> <code>Matheus M. Diegues.</code></h1>
+            <p>&lt;Programador e Web Designer./&gt;</p>
+            <img src="assets/Img/Users/matheus.jpg?raw=true" alt="boy" class="w3-image" width="30%" height="30%">
+        </header>
 
-    <!-- Seção Sobre -->
-    <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
-      <h2 class="w3-text-light-grey">Meu Nome</h2>
-      <hr style="width:200px" class="w3-opacity">
-      <p>Olá, eu sou Matheus Mosken Diegues. Natural de Registro-SP, Atualmente Moro em Pariquera-Açu</p>
-      <p>Sou Tecnico em Desenvolvimento de Sistemas formado pela ETEC de Registro, Fevereiro 2020 - julho 2021 </p>
-      <p>Trabalho nas categorias de Hardware, Desenvolvimento de Software, Manutenção e
-        Instalação de Computadores e Instalação de Antenas</p>
+        <!-- Seção Sobre -->
+        <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+            <h2 class="w3-text-light-grey">Meu Nome</h2>
+            <hr style="width:200px" class="w3-opacity">
+            <p>Olá, eu sou Matheus Mosken Diegues. Natural de Registro-SP, Atualmente Moro em Pariquera-Açu</p>
+            <p>Sou Tecnico em Desenvolvimento de Sistemas formado pela ETEC de Registro, Fevereiro 2020 - julho 2021 </p>
+            <p>Trabalho nas categorias de Hardware, Desenvolvimento de Software, Manutenção e Instalação de Computadores e Instalação de Antenas</p>
 
-      <p>
-        Atualmente estou desenvolvendo um projeto de TCC voltado a área da saúde, que é um app em que o usuário se
-        cadastra, faz o login e tem acesso a uma área para inserir seus sintomas e fazer um pré-diagnostico, assim o app
-        coletará os dados que serão processados e gerando um resultado que pode ou não estar associado uma possível doença associada aos sintomas, e em alguns casos
-        recomendando ao usuário ir ao posto de saúde mais próximo</p>
-      <p> com o tempo, aqueles que não me conhecem, vão me conhecer. </p>
-      <P>As Vezes me sinto muito ansioso e nervoso </P>
-      <p> Ouvir música acalma minha alma,mas também a momentos que apenas o silencio é a cura.
+            <p>
+                Atualmente estou desenvolvendo um projeto de TCC voltado a área da saúde, que é um app em que o usuário se cadastra, faz o login e tem acesso a uma área para inserir seus sintomas e fazer um pré-diagnostico, assim o app coletará os dados que serão processados
+                e gerando um resultado que pode ou não estar associado uma possível doença associada aos sintomas, e em alguns casos recomendando ao usuário ir ao posto de saúde mais próximo</p>
+            <p> com o tempo, aqueles que não me conhecem, vão me conhecer. </p>
+            <P>As Vezes me sinto muito ansioso e nervoso </P>
+            <p> Ouvir música acalma minha alma,mas também a momentos que apenas o silencio é a cura.
 
-      </p>
-      <h3 class="w3-padding-16 w3-text-light-grey">Minhas Habilidades</h3>
-      <hr style="width:250px" class="w3-opacity">
-      <p class="w3-wide">Manutenção e Suporte</p>
-      <div class="w3-white">
-        <div class="w3-dark-grey" style="height:28px;width:95%"></div>
-      </div>
-      <p class="w3-wide">Web Design e Programador</p>
-      <div class="w3-white">
-        <div class="w3-dark-grey" style="height:28px;width:85%"></div>
-      </div>
-      <p class="w3-wide">Photoshop e Design</p>
-      <div class="w3-white">
-        <div class="w3-dark-grey" style="height:28px;width:80%"></div>
-      </div><br>
+            </p>
+            <h3 class="w3-padding-16 w3-text-light-grey">Minhas Habilidades</h3>
+            <hr style="width:250px" class="w3-opacity">
+            <p class="w3-wide">Manutenção e Suporte</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+            </div>
+            <p class="w3-wide">Web Design e Programador</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+            </div>
+            <p class="w3-wide">Photoshop e Design</p>
+            <div class="w3-white">
+                <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+            </div><br>
 
-      <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
-        <div class="w3-quarter w3-section">
-          <span class="w3-xlarge">1120+</span><br>
-          horas de codigo
-        </div>
-        <div class="w3-quarter w3-section">
-          <span class="w3-xlarge">5+</span><br>
-          Projetos
-        </div>
-        <div class="w3-quarter w3-section">
-          <span class="w3-xlarge">N+</span><br>
-          Clientes Felizes
-        </div>
-        <div class="w3-quarter w3-section">
-          <span class="w3-xlarge">150+</span><br>
-          Reuniões
-        </div>
-      </div>
+            <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">1120+</span><br> horas de codigo
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">5+</span><br> Projetos
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">N+</span><br> Clientes Felizes
+                </div>
+                <div class="w3-quarter w3-section">
+                    <span class="w3-xlarge">150+</span><br> Reuniões
+                </div>
+            </div>
 
-      <button class="w3-button w3-light-grey w3-padding-large w3-section">
+            <button class="w3-button w3-light-grey w3-padding-large w3-section">
         <i class="fa fa-download">  <a href="https://docs.google.com/document/d/e/2PACX-1vQG4BbyLyEK3jWreKQ4eRqQhoVz0T7AbEdxUya7iqggvVJ06FCYfev87LcSItt-fpPi9cZEvCZvu5gf/pub" > Visualizar Curriculo</a>
         </i>
       </button>
 
-      <!-- Grade De Preços -->
-      <h3 class="w3-padding-16 w3-text-light-grey" id="projects">Meus Projetos</h3>
-      <hr style="width:150px" class="w3-opacity">
+            <!-- Grade De Preços -->
+            <h3 class="w3-padding-16 w3-text-light-grey" id="projects">Meus Projetos</h3>
+            <hr style="width:150px" class="w3-opacity">
 
-      <div class="w3-row-padding" style="margin:0 -16px" >
-        <div class="w3-half w3-margin-bottom">
-          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-            <li class="w3-dark-grey w3-xlarge w3-padding-32">Projeto Hippotec</li>
-            <li class="w3-padding-16">Banco de Dados</li>
-            <li class="w3-padding-16">Aplicativo Mobile</li>
-            <li class="w3-padding-16">Site Empresa</li>
-            <li class="w3-padding-16">Site Aplicativo</li>
-            <li class="w3-padding-16">
-              <h2>Hippotec</h2>
-              <span class="w3-opacity">Mais Saúde Para Você</span>
-            </li>
-            <li class="w3-light-grey w3-padding-24">
-              <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="https://hipp0tec.000webhostapp.com/" >Visualizar</a> </button>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="w3-half w3-margin-bottom">
-          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-            <li class="w3-dark-grey w3-xlarge w3-padding-32">Calculadora</li>
-            <li class="w3-padding-16">Feito em HTML,CSS,JS</li>
-            <li class="w3-padding-16">Funcional</li>
-            <li class="w3-padding-16">Personalizavel(em breve)</li>
-            <li class="w3-padding-16">Modo Escuro (em breve)</li>
-            <li class="w3-padding-16">
-              <h2>Calculadora</h2>
-              <span class="w3-opacity">Apenas uma calculadora em HTML</span>
-            </li>
-            <li class="w3-light-grey w3-padding-24">
-              <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="calculator/calculator/index.html" >Testar</a></button>
-              <!-- https://dieguesmosken.github.io/calculator/calculator/index.html -->
-            </li>
-          </ul>
-        </div>
-      </div>
-      <!--fim da linha 1-->
-      <div class="w3-row-padding" style="margin:0 -16px" ><!--agrupa os dois blocos-->
-      <div class="w3-half w3-margin-bottom">
-          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-            <li class="w3-dark-grey w3-xlarge w3-padding-32">Dino No Internet Game</li>
-            <li class="w3-padding-16">Feito em HTML,CSS,JS</li>
-            <li class="w3-padding-16">Funcional</li>
-            <li class="w3-padding-16">Modo Escuro (em breve)</li>
-            <li class="w3-padding-16">
-              <h2>No Internet Game(Online)</h2>
-              <span class="w3-opacity">Um projeto que fiz como parte de uma lição da Digital Innovatio One, em HTML,CSS,JS</span>
-            </li>
-            <li class="w3-light-grey w3-padding-24">
-              <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="jogos/dino-no-internet-game/index.html" >Testar</a></button>
-              <!-- https://dieguesmosken.github.io/calculator/calculator/index.html -->
-            </li>
-          </ul>
-        </div>
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-half w3-margin-bottom">
+                    <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Projeto Hippotec</li>
+                        <li class="w3-padding-16">Banco de Dados</li>
+                        <li class="w3-padding-16">Aplicativo Mobile</li>
+                        <li class="w3-padding-16">Site Empresa</li>
+                        <li class="w3-padding-16">Site Aplicativo</li>
+                        <li class="w3-padding-16">
+                            <h2>Hippotec</h2>
+                            <span class="w3-opacity">Mais Saúde Para Você</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="https://hipp0tec.000webhostapp.com/" >Visualizar</a> </button>
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="w3-half w3-margin-bottom">
-          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-            <li class="w3-dark-grey w3-xlarge w3-padding-32">Snake Game</li>
-            <li class="w3-padding-16">Feito em HTML,CSS,JS</li>
-            <li class="w3-padding-16">Funcional</li>
-            <li class="w3-padding-16">Modo Escuro (em breve)</li>
-            <li class="w3-padding-16">
-              <h2>Snake Game em HTML</h2>
-              <span class="w3-opacity">Um projeto que fiz como parte de uma lição da Digital Innovatio One, em HTML,CSS,JS</span>
-            </li>
-            <li class="w3-light-grey w3-padding-24">
-              <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="jogos/snake-game/index.html" >Testar</a></button>
-              <!-- https://dieguesmosken.github.io/calculator/calculator/index.html -->
-            </li>
-          </ul>
-        </div>
-        <!--Fim da linha 2-->
-      <div class="w3-row-padding" style="margin:0 -16px" ><!--agrupa os dois blocos-->
-      <div class="w3-half w3-margin-bottom">
-          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-            <li class="w3-dark-grey w3-xlarge w3-padding-32">new game</li>
-            <li class="w3-padding-16">Feito em HTML,CSS,JS</li>
-            <li class="w3-padding-16">em testes</li>
-            <li class="w3-padding-16">mais funções em breve</li>
-            <li class="w3-padding-16">
-              <h2>Lorem Ipsum</h2>
-              <span class="w3-opacity">Lorem ipsum, em HTML,CSS,JS</span>
-            </li>
-            <li class="w3-light-grey w3-padding-24">
-              <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="jogos/new-jogo/index.html" >Testar</a></button>
-              <!--feito por @dieguesmosken -->
-            </li>
-          </ul>
-        </div>
+                <div class="w3-half w3-margin-bottom">
+                    <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Calculadora</li>
+                        <li class="w3-padding-16">Feito em HTML,CSS,JS</li>
+                        <li class="w3-padding-16">Funcional</li>
+                        <li class="w3-padding-16">Personalizavel(em breve)</li>
+                        <li class="w3-padding-16">Modo Escuro (em breve)</li>
+                        <li class="w3-padding-16">
+                            <h2>Calculadora</h2>
+                            <span class="w3-opacity">Apenas uma calculadora em HTML</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="calculator/calculator/index.html" >Testar</a></button>
+                            <!-- https://dieguesmosken.github.io/calculator/calculator/index.html -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--fim da linha 1-->
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <!--agrupa os dois blocos-->
+                <div class="w3-half w3-margin-bottom">
+                    <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Dino No Internet Game</li>
+                        <li class="w3-padding-16">Feito em HTML,CSS,JS</li>
+                        <li class="w3-padding-16">Funcional</li>
+                        <li class="w3-padding-16">Modo Escuro (em breve)</li>
+                        <li class="w3-padding-16">
+                            <h2>No Internet Game(Online)</h2>
+                            <span class="w3-opacity">Um projeto que fiz como parte de uma lição da Digital Innovatio One, em HTML,CSS,JS</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="jogos/dino-no-internet-game/index.html" >Testar</a></button>
+                            <!-- https://dieguesmosken.github.io/calculator/calculator/index.html -->
+                        </li>
+                    </ul>
+                </div>
 
-        <div class="w3-half w3-margin-bottom">
-          <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-            <li class="w3-dark-grey w3-xlarge w3-padding-32">lorem ipsum</li>
-            <li class="w3-padding-16">Feito em Lorem ipsum</li>
-            <li class="w3-padding-16">lorem ipsum</li>
-            <li class="w3-padding-16">lorem ipsum (em breve)</li>
-            <li class="w3-padding-16">
-              <h2>titulo descrição</h2>
-              <span class="w3-opacity">descrição</span>
-            </li>
-            <li class="w3-light-grey w3-padding-24">
-              <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="error/index.html" >Testar</a></button>
-              <!-- por 3dieguesmoskengit status -->
-            </li>
-          </ul>
-        </div>
-        </div>
-        </div>
-        <!-- Fim da Grade de Projetos -->
-      </hr>
+                <div class="w3-half w3-margin-bottom">
+                    <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                        <li class="w3-dark-grey w3-xlarge w3-padding-32">Snake Game</li>
+                        <li class="w3-padding-16">Feito em HTML,CSS,JS</li>
+                        <li class="w3-padding-16">Funcional</li>
+                        <li class="w3-padding-16">Modo Escuro (em breve)</li>
+                        <li class="w3-padding-16">
+                            <h2>Snake Game em HTML</h2>
+                            <span class="w3-opacity">Um projeto que fiz como parte de uma lição da Digital Innovatio One, em HTML,CSS,JS</span>
+                        </li>
+                        <li class="w3-light-grey w3-padding-24">
+                            <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="jogos/snake-game/index.html" >Testar</a></button>
+                            <!-- https://dieguesmosken.github.io/calculator/calculator/index.html -->
+                        </li>
+                    </ul>
+                </div>
+                <!--Fim da linha 2-->
+                <div class="w3-row-padding" style="margin:0 -16px">
+                    <!--agrupa os dois blocos-->
+                    <div class="w3-half w3-margin-bottom">
+                        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                            <li class="w3-dark-grey w3-xlarge w3-padding-32">new game</li>
+                            <li class="w3-padding-16">Feito em HTML,CSS,JS</li>
+                            <li class="w3-padding-16">em testes</li>
+                            <li class="w3-padding-16">mais funções em breve</li>
+                            <li class="w3-padding-16">
+                                <h2>Lorem Ipsum</h2>
+                                <span class="w3-opacity">Lorem ipsum, em HTML,CSS,JS</span>
+                            </li>
+                            <li class="w3-light-grey w3-padding-24">
+                                <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="jogos/new-jogo/index.html" >Testar</a></button>
+                                <!--feito por @dieguesmosken -->
+                            </li>
+                        </ul>
+                    </div>
 
-      <!-- Testemunhas -->
-      <h3 class="w3-padding-24 w3-text-light-grey">Minha Reputação</h3>
-      <hr style="width:220px" class="w3-opacity">
-      <img src="assets/Img/Users/img_user0.png?raw=true" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <p><span class="w3-large w3-margin-right">Bruno Chiga.</span> Programador da Hippotec.</p>
-      <p>Matheus Diegues nos salvou de um desastre na web.</p><br>
+                    <div class="w3-half w3-margin-bottom">
+                        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                            <li class="w3-dark-grey w3-xlarge w3-padding-32">lorem ipsum</li>
+                            <li class="w3-padding-16">Feito em Lorem ipsum</li>
+                            <li class="w3-padding-16">lorem ipsum</li>
+                            <li class="w3-padding-16">lorem ipsum (em breve)</li>
+                            <li class="w3-padding-16">
+                                <h2>titulo descrição</h2>
+                                <span class="w3-opacity">descrição</span>
+                            </li>
+                            <li class="w3-light-grey w3-padding-24">
+                                <button class="w3-button w3-white w3-padding-large w3-hover-black"><a href="error/index.html" >Testar</a></button>
+                                <!-- por 3dieguesmoskengit status -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Fim da Grade de Projetos -->
+            </hr>
 
-      <img src="assets/Img/Users/img_user2.png?raw=true" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <p><span class="w3-large w3-margin-right">George Antony.</span> CEO da Hippotec.</p>
-      <p>Ninguém é melhor do que Matheus Diegues.</p>
-      <!-- Fim da Seção Sobre -->
-    </div>
+            <!-- Testemunhas -->
+            <h3 class="w3-padding-24 w3-text-light-grey">Minha Reputação</h3>
+            <hr style="width:220px" class="w3-opacity">
+            <img src="assets/Img/Users/img_user0.png?raw=true" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p><span class="w3-large w3-margin-right">Bruno Chiga.</span> Programador da Hippotec.</p>
+            <p>Matheus Diegues nos salvou de um desastre na web.</p><br>
 
-    <!-- Portifolio Seção -->
-    <div class="w3-padding-64 w3-content" id="photos">
-      <h2 class="w3-text-light-grey">Minhas Fotos</h2>
-      <hr style="width:200px" class="w3-opacity">
-
-      <!-- Grade de Fotos -->
-      <div class="w3-row-padding" style="margin:0 -16px">
-        <div class="w3-half">
-          <img src="assets/Img/foto1.png?raw=true" alt="error_not_found" style="width:100%">
-          <img src="assets/Img/foto2.jpg?raw=true" alt="error_not_found" style="width:100%">
-          <img src="assets/Img/foto10.jpg?raw=true" alt="error_not_found" style="width:100%">
+            <img src="assets/Img/Users/img_user2.png?raw=true" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+            <p><span class="w3-large w3-margin-right">George Antony.</span> CEO da Hippotec.</p>
+            <p>Ninguém é melhor do que Matheus Diegues.</p>
+            <!-- Fim da Seção Sobre -->
         </div>
 
-        <div class="w3-half">
-          <img src="assets/Img/Users/matheus.jpg?raw=true" alt="error_not_found" style="width:100%">
-          <img src="assets/Img/foto3.jpg?raw=true" alt="error_not_found" style="width:100%">
-          <img src="assets/Img/foto9.jpg?raw=true" alt="error_not_found" style="width:100%">
+        <!-- Portifolio Seção -->
+        <div class="w3-padding-64 w3-content" id="photos">
+            <h2 class="w3-text-light-grey">Minhas Fotos</h2>
+            <hr style="width:200px" class="w3-opacity">
+
+            <!-- Grade de Fotos -->
+            <div class="w3-row-padding" style="margin:0 -16px">
+                <div class="w3-half">
+                    <img src="assets/Img/foto1.png?raw=true" alt="error_not_found" style="width:100%">
+                    <img src="assets/Img/foto2.jpg?raw=true" alt="error_not_found" style="width:100%">
+                    <img src="assets/Img/foto10.jpg?raw=true" alt="error_not_found" style="width:100%">
+                </div>
+
+                <div class="w3-half">
+                    <img src="assets/Img/Users/matheus.jpg?raw=true" alt="error_not_found" style="width:100%">
+                    <img src="assets/Img/foto3.jpg?raw=true" alt="error_not_found" style="width:100%">
+                    <img src="assets/Img/foto9.jpg?raw=true" alt="error_not_found" style="width:100%">
+                </div>
+                <!-- End photo grid -->
+            </div>
+            <!-- End Portfolio Section -->
         </div>
-        <!-- End photo grid -->
-      </div>
-      <!-- End Portfolio Section -->
-    </div>
 
-    <!-- Contact Section -->
-    <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
-      <h2 class="w3-text-light-grey">Me Contate</h2>
-      <hr style="width:200px" class="w3-opacity">
+        <!-- Contact Section -->
+        <div class="w3-padding-64 w3-content w3-text-grey" id="contact">
+            <h2 class="w3-text-light-grey">Me Contate</h2>
+            <hr style="width:200px" class="w3-opacity">
 
-      <div class="w3-section">
-        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Rua Marcelo Marieto, 192 -
-          Pariquera-Açu, SP</p>
-        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Tel: +55 13 99712-1709</p>
-        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email:
-          Matheus.diegues@outlook.com</p>
-      </div><br>
-      <p>Vamos entrar em contato. Me mande uma mensagem:</p>
+            <div class="w3-section">
+                <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Rua Marcelo Marieto, 192 - Pariquera-Açu, SP</p>
+                <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Tel: +55 13 99712-1709</p>
+                <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: Matheus.diegues@outlook.com
+                </p>
+            </div><br>
+            <p>Vamos entrar em contato. Me mande uma mensagem:</p>
 
-      <form>
-        <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Name"></p>
-        <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-        <p><input class="w3-input w3-padding-16" type="text" placeholder="Assunto" required name="Subject"></p>
-        <p><input class="w3-input w3-padding-16" type="text" placeholder="Mensagem" required name="Message"></p>
-        <p>
-          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+            <form>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Nome" required name="Name"></p>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Assunto" required name="Subject"></p>
+                <p><input class="w3-input w3-padding-16" type="text" placeholder="Mensagem" required name="Message"></p>
+                <p>
+                    <button class="w3-button w3-light-grey w3-padding-large" type="submit">
             <i class="fa fa-paper-plane"></i> ENVIAR MENSAGEM
           </button>
-        </p>
-      </form>
-      <!-- Final da Seção Contatos -->
-    </div>
+                </p>
+            </form>
+            <!-- Final da Seção Contatos -->
+        </div>
 
-    <!-- rodapé -->
-    <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
-      <a href="https://fb.me/dieguesmosken"><i class="fa fa-facebook-official w3-hover-opacity"></a></i>
-      <a href="https://instagram.com/matheus.diegues"><i class="fa fa-instagram w3-hover-opacity"></a></i>
-      <a href="https://t.me/dieguesmosken"><i class="fa fa-telegram w3-hover-opacity"></a></i>
-      <a
-        href="https://api.whatsapp.com/send?phone=5513997121709&text=Oi%20tudo%20bem%2C%20Gostaria%20de%20Pedir%20Um%20Or%C3%A7amento"><i
+        <!-- rodapé -->
+        <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+            <a href="https://fb.me/dieguesmosken"><i class="fa fa-facebook-official w3-hover-opacity"></a></i>
+            <a href="https://instagram.com/matheus.diegues"><i class="fa fa-instagram w3-hover-opacity"></a></i>
+            <a href="https://t.me/dieguesmosken"><i class="fa fa-telegram w3-hover-opacity"></a></i>
+            <a href="https://api.whatsapp.com/send?phone=5513997121709&text=Oi%20tudo%20bem%2C%20Gostaria%20de%20Pedir%20Um%20Or%C3%A7amento"><i
           class="fa fa-whatsapp w3-hover-opacity"></a></i>
-      <a href="https://twitter.com/dieguesmosken"><i class="fa fa-twitter w3-hover-opacity"></a></i>
-      <a href="https://github.com/dieguesmosken"><i class="fa fa-github w3-hover-opacity"></a></i>
-      <a href="https://linkedin.com/in/dieguesmosken"><i class="fa fa-linkedin w3-hover-opacity"></a></i>
-      <p class="w3-medium">Desenvolvido por: <a href="https://linkei.com.br/dieguesmosken" target="_blank"
-          class="w3-hover-text-green">@dieguesmosken</a></p>
-     <!--  <p class="w3-medium">Site Externo: <a href="https://dieguesmosken.github.io/" target="_blank"
+            <a href="https://twitter.com/dieguesmosken"><i class="fa fa-twitter w3-hover-opacity"></a></i>
+            <a href="https://github.com/dieguesmosken"><i class="fa fa-github w3-hover-opacity"></a></i>
+            <a href="https://linkedin.com/in/dieguesmosken"><i class="fa fa-linkedin w3-hover-opacity"></a></i>
+            <p class="w3-medium">Desenvolvido por: <a href="https://linkei.com.br/dieguesmosken" target="_blank" class="w3-hover-text-green">@dieguesmosken</a></p>
+            <!--  <p class="w3-medium">Site Externo: <a href="https://dieguesmosken.github.io/" target="_blank"
             class="w3-hover-text-green">dieguesmosken.github.io</a></p>
       Final do rodapé -->
-    </footer>
+        </footer>
 
-    <!-- FINAL DO CONTEUDO DA PAGINA -->
-  </div>
+        <!-- FINAL DO CONTEUDO DA PAGINA -->
+    </div>
 
 </body>
 
