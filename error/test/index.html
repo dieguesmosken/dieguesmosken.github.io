@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<title>404 HTeuzinML</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Chango" rel="stylesheet">
+
+<!-- Custom stlylesheet -->
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+
+
+<style>
+    body::-webkit-scrollbar {
+        width: 12px;
+        /* width of the entire scrollbar */
+    }
+    
+    body::-webkit-scrollbar-track {
+        background: grey;
+        /* color of the tracking area */
+    }
+    
+    body::-webkit-scrollbar-thumb {
+        background-color: black;
+        /* color of the scroll thumb */
+        border-radius: 20px;
+        /* roundness of the scroll thumb */
+        border: 3px solid gray;
+        /* creates padding around scroll thumb */
+    }
+    
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Montserrat", sans-serif;
+    }
+    
+    .w3-row-padding img {
+        margin-bottom: 12px
+    }
+    /* Mudar a largura da barra lateral para 120px */
+    
+    .w3-sidebar {
+        width: 120px;
+        background: #222;
+    }
+    /* Adicionar uma margem esquerda ao "conteúdo da página" que corresponda à largura da barra lateral (120px) */
+    
+    #main {
+        margin-left: 120px
+    }
+    /* Remover as margens do "conteúdo da página" nas telas pequenas */
+    
+    @media only screen and (max-width: 600px) {
+        #main {
+            margin-left: 0
+        }
+    }
+</style>
+
+
+<body class="w3-black">
+
+    <!-- Barra de Icones (Barra Leteral - Oculto em telas pequenas) -->
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+        <!-- Avatar imagem no canto superior esquerdo -->
+
+        <h1 id="dev" style="padding: 0.5cm;color: orangered;">&lt;/&gt;</h1>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
+            <i class="fa fa-bug w3-xxlarge"></i>
+            <p>ERROR</p>
+        </a>
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-exclamation-triangle w3-xxlarge"></i>
+            <p>ERROR</p>
+        </a>
+        <a href="https://t.me/TeuzinYTBR" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-telegram w3-xxlarge"></i>
+            <p>ERROR</p>
+        </a>
+        <a href="https://instagram.com/matheus.diegues" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-instagram w3-xxlarge"></i>
+            <p>ERROR</p>
+        </a>
+
+        <a href="https://fb.me/dieguesmosken" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            </i><i class="fa fa-facebook-official w3-xxlarge"></i>
+            <p>ERROR</p>
+        </a>
+
+        <a href="https://github.com/dieguesmosken" target="_blank" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+            <i class="fa fa-github w3-xxlarge"></i>
+            <p>ERROR</p>
+        </a>
+
+
+    </nav>
+
+    <!-- Barra de Navegação Em telas pequenas (Oculta em Telas Medias e Largas) -->
+    <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+        <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+            <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">SOBRE</a>
+            <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">FOTOS</a>
+            <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">PROJETOS</a>
+            <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTATO</a>
+        </div>
+    </div>
+
+    <!-- Conteudo da Pagina -->
+    <div class="" id="main">
+
+        <!--
+        <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+ Cabeçalho/Inicio -->
+
+        <div id="notfound">
+            <div class="notfound">
+                <div>
+                    <div class="notfound-404">
+                        <h1>!</h1>
+                    </div>
+                    <div>
+
+                        <h2>Erro 404</h2><br>
+
+                    </div>
+
+
+                    <script>
+                        setInterval(function() {
+
+                            let novaHora = new Date();
+
+                            let hora = novaHora.getHours(); // getHours trará a hora
+                            let minuto = novaHora.getMinutes(); // geMinutes trará os minutos
+                            let segundo = novaHora.getSeconds(); // getSeconds trará os segundos
+                            // Chamamos a função zero para que ela retorne a concatenação
+                            // com os minutos e segundos
+                            minuto = zero(minuto);
+                            segundo = zero(segundo);
+                            // Com o textContent, iremos inserir as horas, minutos e segundos
+                            // no nosso elemento HTML
+                            document.getElementById('hora').textContent = hora + ':' + minuto + ':' + segundo;
+                        }, 1000)
+
+                        function zero(x) {
+                            if (x < 10) {
+                                x = '0' + x;
+                            }
+                            return x;
+                        }
+                    </script>
+                </div><br>
+                <p>A página que você está procurando pode ter sido removida,seu nome pode ter sido alterado ou esta temporariamente indisponível. &nbsp;
+                    <a href="../../index.html">Não Clique Aqui²!</a>
+                </p>
+                <h3 id="hora"></h3>
+            </div>
+
+
+
+
+
+        </div>
+        <!-- </header>-->
+
+
+
+        <!-- Contact Section -->
+
+
+
+        <!-- Final da Seção github -->
+
+
+        <!-- rodapé -->
+
+
+
+        <!-- FINAL DO CONTEUDO DA PAGINA -->
+    </div>
+
+</body>
+
+</html>
