@@ -97,18 +97,19 @@ let drawLocation = () => {
     canvasContext.fillText(
         "X: " + pacman.x + " Y: " + pacman.y,
         280,
-        oneBlockSize * (map.length + 1) + 10
+        oneBlockSize * (map.length + 1) + 5
     );
 }
 
-// let drawGhostLocation = () => {
-//     canvasContext.font = "20px Arial Black";
-//     canvasContext.fillStyle = "white";
-//     canvasContext.fillText(
-//         "X: " + ghost.x + " Y: " + ghost.y,
-//         0,
-//         oneBlockSize * (map.length + 1) + 30
-//     );
+let drawGhostLocation = () => {
+    canvasContext.font = "20px Arial Black";
+    canvasContext.fillStyle = "white";
+    canvasContext.fillText(
+        //"X: " + ghost.x + " Y: " + ghost.y,
+        "X: GhostX" + " Y: GhostY",
+        0,
+        oneBlockSize * (map.length + 1) + 30
+    );
 
 let drawScore = () => {
    
@@ -117,7 +118,7 @@ let drawScore = () => {
     canvasContext.fillText(
         "Score: " + score,
         0,
-        oneBlockSize * (map.length + 1) + 10
+        oneBlockSize * (map.length + 1) + 15
     );
     
 }
@@ -131,6 +132,7 @@ let draw = () => {
     drawFoods();
     drawScore();
     drawLocation();
+    drawGhostLocation();
     // ghost.draw();
 }
 
