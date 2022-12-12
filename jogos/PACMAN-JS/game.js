@@ -96,8 +96,8 @@ let drawLocation = () => {
 
     canvasContext.fillText(
         "X: " + pacman.x + " Y: " + pacman.y,
-        280,
-        oneBlockSize * (map.length + 1) + 5
+        450,
+        oneBlockSize  + 40
     );
 }
 
@@ -108,17 +108,17 @@ let drawGhostLocation = () => {
         //"X: " + ghost.x + " Y: " + ghost.y,
         "X: GhostX" + " Y: GhostY",
         0,
-        oneBlockSize * (map.length + 1) + 30
+        oneBlockSize * (map.length + 1) + 35
     );
-
+}
 let drawScore = () => {
    
     canvasContext.font = "40px Arial Black";
     canvasContext.fillStyle = "white";
     canvasContext.fillText(
         "Score: " + score,
-        0,
-        oneBlockSize * (map.length + 1) + 15
+        450,
+        oneBlockSize  + 15
     );
     
 }
