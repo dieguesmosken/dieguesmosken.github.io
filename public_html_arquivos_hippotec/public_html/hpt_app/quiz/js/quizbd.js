@@ -29,9 +29,9 @@ $(function () {
                 data: url,
                 success: function (data) {
 
-                    console.log(data);
-                    console.log(" array.length ");
-                    console.log(data.length);
+                    
+                    
+                    
                     $.getJSON(url, function (result) {
 
                         $.each(result, function (i, field) {
@@ -55,9 +55,9 @@ $(function () {
                                 );
 
                             }
-                            console.log(total);
-                            console.log("espaço");
-                            console.log(questions[1]);
+                            
+                            
+                            
 
                         });
 

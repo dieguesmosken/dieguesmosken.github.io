@@ -1,5 +1,5 @@
-console.log('[DevSoutinho] Flappy Bird');
-console.log('Inscreva-se no canal :D https://www.youtube.com/channel/UCzR2u5RWXWjUh7CwLSvbitA');
+
+
 
 let frames = 0;
 const som_HIT = new Audio();
@@ -104,16 +104,16 @@ function criaFlappyBird() {
         y: 50,
         pulo: 4.6,
         pula() {
-            console.log('devo pular');
-            console.log('[antes]', flappyBird.velocidade);
+            
+            
             flappyBird.velocidade = - flappyBird.pulo;
-            console.log('[depois]', flappyBird.velocidade);
+            
         },
         gravidade: 0.25,
         velocidade: 0,
         atualiza() {
             if (fazColisao(flappyBird, globais.chao)) {
-                console.log('Fez colisao');
+                
                 som_HIT.play();
 
                 mudaParaTela(Telas.GAME_OVER);
@@ -274,7 +274,7 @@ function criaCanos() {
         atualiza() {
             const passou100Frames = frames % 100 === 0;
             if (passou100Frames) {
-                console.log('Passou 100 frames');
+                
                 canos.pares.push({
                     x: canvas.width,
                     y: -150 * (Math.random() + 1),
@@ -287,7 +287,7 @@ function criaCanos() {
                 par.x = par.x - 2;
 
                 if (canos.temColisaoComOFlappyBird(par)) {
-                    console.log('Você perdeu!')
+                    
                     som_HIT.play();
                     mudaParaTela(Telas.GAME_OVER);
                 }
