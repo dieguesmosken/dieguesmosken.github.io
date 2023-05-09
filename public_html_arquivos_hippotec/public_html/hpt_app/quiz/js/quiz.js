@@ -13,7 +13,7 @@ $(function () {
 
 
     $(document).ready(function () {
-        console.log("passou no teste no script!")
+        
     });
 
 

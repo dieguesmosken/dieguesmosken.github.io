@@ -6,7 +6,7 @@ let position = 0;
 
 function handleKeyUp(event){
     if (event.keyCode === 32){
-        console.log('pressionou espaço!');
+        
         if(!isJumping){
             jump();   
         }
@@ -41,7 +41,7 @@ function createCactus() {
     const cactus = document.createElement('div');
     let cactusPosition = 1000;
     let randomTime = Math.random() * 6000;
-    console.log(randomTime);
+    
 
     cactus.classList.add('cactus');
     cactus.style.left = 1000 + 'px';
