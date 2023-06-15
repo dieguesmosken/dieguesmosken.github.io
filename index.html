@@ -13,25 +13,19 @@
 <script>
 </script>
 <style>
-    body::-webkit-scrollbar {
-        width: 12px;
-        /* width of the entire scrollbar */
-    }
-    
+    /* Define a cor de fundo da área de rastreamento da barra de rolagem */
     body::-webkit-scrollbar-track {
-        background: grey;
-        /* color of the tracking area */
+        background-color: #f5f5f5;
     }
     
+    /* Define a cor e a aparência do polegar da barra de rolagem */
     body::-webkit-scrollbar-thumb {
         background-color: black;
-        /* color of the scroll thumb */
         border-radius: 20px;
-        /* roundness of the scroll thumb */
         border: 3px solid gray;
-        /* creates padding around scroll thumb */
     }
     
+    /* Define a fonte usada para o texto na página */
     body,
     h1,
     h2,
@@ -42,31 +36,35 @@
         font-family: "Montserrat", sans-serif;
     }
     
+    /* Define a margem inferior para imagens dentro de um elemento com a classe "w3-row-padding" */
     .w3-row-padding img {
         margin-bottom: 12px
     }
-    /* Mudar a largura da barra lateral para 120px */
     
+    /* Define a largura da barra lateral e a cor de fundo */
     .w3-sidebar {
         width: 120px;
         background: #222;
     }
-    /* Adicionar uma margem esquerda ao "conteúdo da página" que corresponda à largura da barra lateral (120px) */
     
+    /* Define a margem esquerda do "conteúdo da página" para corresponder à largura da barra lateral */
     #main {
         margin-left: 120px
     }
-    /* Remover as margens do "conteúdo da página" nas telas pequenas */
     
+    /* Remove a margem esquerda do "conteúdo da página" em telas pequenas */
     @media only screen and (max-width: 600px) {
         #main {
             margin-left: 0
         }
     }
 </style>
+
 <script>
+    /* Define uma função que é executada a cada intervalo de tempo */
     setInterval(function() {
 
+        /* Cria um novo objeto Date */
         let novaHora = new Date();
 
         let hora = novaHora.getHours(); // getHours trará a hora
