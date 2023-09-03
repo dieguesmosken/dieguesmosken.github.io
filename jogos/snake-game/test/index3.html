@@ -1,41 +1,49 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
-<script defer src="script.js"></script>
-<title>SnakeNEW test</title>
-<style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        font-family: "Lato", sans-serif
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <script defer src="usuarios.js"></script>
+    <title>SnakeNEW test</title>
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
 
-    .w3-bar,
-    h1,
-    button {
-        font-family: "Montserrat", sans-serif
-    }
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
 
-    .fa-ambulance,
-    .fa-laptop {
-        font-size: 150px
-    }
-</style>
+        .fa-ambulance,
+        .fa-laptop {
+            font-size: 150px
+        }
+        
+        /* Estilos do campo Nome do Jogador */
+        #nomeJogador {
+            color: #fff;
+            /* margin-left: 10px; */
+        }
+    </style>
+</head>
 
 <body>
-
     <!-- Navbar -->
     <div class="w3-top">
         <div class="w3-bar w3-green w3-card w3-left-align w3-large">
@@ -50,19 +58,17 @@
             <a href="../flappy-bird/index.html"
                 class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">FLAPPY BIRD</a>
 
-
+            <a class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" href="#" onclick="cadastrarUsuario()">Cadastrar</a>
+            <a  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" href="#" onclick="fazerLogin()">Login</a>
+            <span class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" id="nomeJogador"></span>
         </div>
 
         <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
             <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white">HOME</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">#</a>
-
-
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">#</a>
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">#</a>
-
-            <a href="#" class="w3-bar-item w3-button w3-padding-large">#</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white" onclick="cadastrarUsuario()">Cadastrar</a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-white" onclick="fazerLogin()">Login</a>
+            <span id="nomeJogador"></span>
         </div>
     </div>
 
@@ -75,40 +81,14 @@
             <div class="w3-container w3-green w3-cell">
                 <h2>Placar</h2>
                 <div class="placar" id="placar">0000</div>
-
+                <div>Pontuação Máxima: <span id="maxScore">0</span></div>
+                <h3>Pontuações dos Jogadores</h3>
+                <ul id="scoresList"></ul>
             </div>
-
-
         </div>
     </div>
 
     <script>
-        // Verifica se já existe um nome de usuário
-        let username = localStorage.getItem('username');
-        if (!username) {
-            username = prompt('Insira seu nome de usuário:');
-            localStorage.setItem('username', username);
-        }
-
-        // Obtém a pontuação máxima do usuário
-        let maxScore = localStorage.getItem(username);
-        if (maxScore === null) {
-            maxScore = 0;
-        }
-
-        function updateMaxScore() {
-            if (snake.length > maxScore) {
-                maxScore = snake.length;
-                localStorage.setItem(username, maxScore);
-            }
-        }
-
-        // Chamar essa função para atualizar a pontuação máxima
-        updateMaxScore();
-
-        // Exibir a pontuação máxima
-        document.getElementById('maxScore').innerText = maxScore;
-
 
         // Used to toggle the menu on small screens when clicking on the menu button
         function myFunction() {
@@ -119,6 +99,14 @@
                 x.className = x.className.replace(" w3-show", "");
             }
         }
+
+        // Impedir a rolagem da página ao pressionar as setas
+        window.addEventListener("keydown", function (e) {
+            // Verificar se a tecla pressionada é uma das setas
+            if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1) {
+                e.preventDefault();
+            }
+        }, false);
     </script>
 
 </body>

@@ -99,7 +99,64 @@ function iniciarJogo(){
     }
     
     placar();
+
+
+
+    // Verifica se já existe um nome de usuário
+    let username = localStorage.getItem('username');
+    if (!username) {
+        username = prompt('Insira seu nome de usuário:');
+        localStorage.setItem('username', username);
+    }
+
+    // Obtém a pontuação máxima do usuário
+    let maxScore = localStorage.getItem(username);
+    if (maxScore === null) {
+        maxScore = 0;
+    }
+
+    function updateMaxScore() {
+        if (snake.length > maxScore) {
+            maxScore = snake.length;
+            localStorage.setItem(username, maxScore);
+        }
+    }
+
+    // Chamar essa função para atualizar a pontuação máxima
+    updateMaxScore();
+
+    // Exibir a pontuação máxima
+    document.getElementById('maxScore').innerText = maxScore;
+
     // fim da area em desenvolvimento
+
+    // ... Código JavaScript scorelist ...
+
+function updateScoresList() {
+    // Limpar a lista de pontuações
+    const scoresList = document.getElementById('scoresList');
+    scoresList.innerHTML = '';
+
+    // Obter e ordenar as pontuações dos jogadores
+    const players = Object.keys(localStorage);
+    const scores = players.map(player => ({
+        name: player,
+        score: parseInt(localStorage.getItem(player))
+    }));
+    scores.sort((a, b) => b.score - a.score);
+
+    // Adicionar as pontuações à lista
+    scores.forEach(score => {
+        const li = document.createElement('li');
+        li.textContent = `${score.name}: ${score.score}`;
+        scoresList.appendChild(li);
+    });
+}
+
+// Atualizar a lista de pontuações quando necessário
+updateScoresList();
+
+// ... Código JavaScript scorelist ...
 }
 
 let jogo = setInterval(iniciarJogo, 100);
