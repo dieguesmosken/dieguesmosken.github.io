@@ -35,7 +35,7 @@ function fazerLogin() {
 function exibirNomeJogadorLogado(username) {
     const nomeJogador = document.getElementById('nomeJogador');
     if (username) {
-        nomeJogador.textContent = 'Nome do Jogador: ' + username;
+        nomeJogador.textContent = 'Logado como: ' + username;
     } else {
         nomeJogador.textContent = '';
     }
