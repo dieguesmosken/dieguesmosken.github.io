@@ -32,8 +32,11 @@ function drawFood() {
 }
 
 
+// ouvintes de eventos
 
 document.addEventListener("keydown", update);
+// Adicionar um ouvinte de evento ao botão "Sair"
+document.getElementById('btnSair').addEventListener('click', sair);
 
 function update(event) {
     if (event.keyCode == 37 && direction != "right") direction = "left";
@@ -44,7 +47,23 @@ function update(event) {
 
 }
 
+function atualizarPontuacao(pontuacao) {
+    // Atualizar a pontuação atual
+
+    // Obter a pontuação máxima atual do localStorage
+    let pontuacaoMaxima = localStorage.getItem('pontuacaoMaxima');
+
+    // Verificar se a pontuação máxima atual é menor que a nova pontuação
+    if (!pontuacaoMaxima || parseInt(pontuacaoMaxima) < pontuacao) {
+        pontuacaoMaxima = pontuacao.toString();
+        localStorage.setItem('pontuacaoMaxima', pontuacaoMaxima);
+    }
+
+    // Resto do código de atualização da pontuação
+}
+
 function iniciarJogo() {
+
 
     if (snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
     if (snake[0].x < 0 && box && direction == "left") snake[0].x = 16 * box;
@@ -125,8 +144,7 @@ function iniciarJogo() {
     // Exibir a pontuação máxima
     document.getElementById('maxScore').innerText = maxScore;
 
-    // Exibir a pontuação máxima
-    document.getElementById('maxScore').innerText = maxScore;
+
     // fim da area em desenvolvimento
 
     // ... Código JavaScript scorelist ...
@@ -156,7 +174,12 @@ function iniciarJogo() {
 
     // ... Código JavaScript scorelist ...
 
+
+    exibirNomeJogadorLogado(username)
+
+    
 }
 
 let jogo = setInterval(iniciarJogo, 100);
+
 

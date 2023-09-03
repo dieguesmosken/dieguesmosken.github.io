@@ -38,8 +38,7 @@ function sair() {
     // Redirecionar para a página de login ou qualquer outra ação necessária após sair
 }
 
-// Adicionar um ouvinte de evento ao botão "Sair"
-document.getElementById('btnSair').addEventListener('click', sair);
+
 
 
 function exibirNomeJogadorLogado(username) {
@@ -57,6 +56,7 @@ function fazerLogin() {
     if (!username) {
         username = prompt('Insira seu nome de usuário:');
         localStorage.setItem('username', username);
+        
     } else {
         const userListString = localStorage.getItem('userList');
         const userList = userListString ? JSON.parse(userListString) : [];
@@ -65,10 +65,10 @@ function fazerLogin() {
             userList.push(username);
             localStorage.setItem('userList', JSON.stringify(userList));
         }
-        exibirNomeJogadorLogado(username)
+        // exibirNomeJogadorLogado(username)
     }
 
     // Resto do código de login...
+    exibirNomeJogadorLogado(username)
 }
 
-exibirNomeJogadorLogado(username)

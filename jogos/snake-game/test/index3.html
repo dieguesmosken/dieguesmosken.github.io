@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
     <script defer src="usuarios.js"></script>
+    <script defer src="script.js"></script>
+    
     <title>SnakeNEW test</title>
     <style>
         body,
@@ -62,7 +63,7 @@
             <a  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" href="#" onclick="fazerLogin()">Login</a>
             <span class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" id="nomeJogador"></span>
               <!-- Botão "Sair" -->
-    <a class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" href="#" onclick="sair()">Sair</a>
+            <a class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" id="btnSair" href="#" onclick="sair()">Sair</a>
         </div>
 
         <!-- Navbar on small screens -->
@@ -83,7 +84,7 @@
             <div class="w3-container w3-green w3-cell">
                 <h2>Placar</h2>
                 <div class="placar" id="placar">0000</div>
-                <div>Pontuação Máxima: <span id="maxScore">0</span></div>
+                <div>Pontuação Máxima do jogador: <span id="maxScore">0</span></div>
                 
                 <h3>Pontuações dos Jogadores</h3>
                 <ul id="scoresList"></ul>
