@@ -61,6 +61,8 @@
             <a class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" href="#" onclick="cadastrarUsuario()">Cadastrar</a>
             <a  class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" href="#" onclick="fazerLogin()">Login</a>
             <span class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" id="nomeJogador"></span>
+              <!-- Botão "Sair" -->
+    <a class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white" href="#" onclick="sair()">Sair</a>
         </div>
 
         <!-- Navbar on small screens -->
@@ -82,6 +84,7 @@
                 <h2>Placar</h2>
                 <div class="placar" id="placar">0000</div>
                 <div>Pontuação Máxima: <span id="maxScore">0</span></div>
+                
                 <h3>Pontuações dos Jogadores</h3>
                 <ul id="scoresList"></ul>
             </div>
@@ -90,6 +93,8 @@
 
     <script>
 
+        
+    
         // Used to toggle the menu on small screens when clicking on the menu button
         function myFunction() {
             var x = document.getElementById("navDemo");

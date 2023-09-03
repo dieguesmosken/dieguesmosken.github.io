@@ -19,18 +19,28 @@ function cadastrarUsuario() {
     alert('Cadastro realizado com sucesso!');
 }
 
-function fazerLogin() {
-    const username = prompt('Insira seu nome de usuário:');
-    const userListString = localStorage.getItem('userList');
-    const userList = userListString ? JSON.parse(userListString) : [];
+// function fazerLogin() {
+//     const username = prompt('Insira seu nome de usuário:');
+//     const userListString = localStorage.getItem('userList');
+//     const userList = userListString ? JSON.parse(userListString) : [];
 
-    if (userList.includes(username)) {
-        alert('Login realizado com sucesso!');
-        exibirNomeJogadorLogado(username);
-    } else {
-        alert('Nome de usuário inválido!');
-    }
+//     if (userList.includes(username)) {
+//         alert('Login realizado com sucesso!');
+//         exibirNomeJogadorLogado(username);  // Adicionando esta linha
+//     } else {
+//         alert('Nome de usuário inválido!');
+//     }
+// }
+
+// Função para manipular o clique no botão "Sair"
+function sair() {
+    localStorage.removeItem('username');
+    // Redirecionar para a página de login ou qualquer outra ação necessária após sair
 }
+
+// Adicionar um ouvinte de evento ao botão "Sair"
+document.getElementById('btnSair').addEventListener('click', sair);
+
 
 function exibirNomeJogadorLogado(username) {
     const nomeJogador = document.getElementById('nomeJogador');
@@ -40,3 +50,25 @@ function exibirNomeJogadorLogado(username) {
         nomeJogador.textContent = '';
     }
 }
+
+function fazerLogin() {
+    // Verificar se já existe um nome de usuário
+    let username = localStorage.getItem('username');
+    if (!username) {
+        username = prompt('Insira seu nome de usuário:');
+        localStorage.setItem('username', username);
+    } else {
+        const userListString = localStorage.getItem('userList');
+        const userList = userListString ? JSON.parse(userListString) : [];
+
+        if (!userList.includes(username)) {
+            userList.push(username);
+            localStorage.setItem('userList', JSON.stringify(userList));
+        }
+        exibirNomeJogadorLogado(username)
+    }
+
+    // Resto do código de login...
+}
+
+exibirNomeJogadorLogado(username)
