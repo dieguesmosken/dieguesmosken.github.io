@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Player</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
     <main>
         <section id="playlist">
             <input type="file" id="music-files" multiple>
-            <button onclick="addSelectedMusic()">Adicionar Músicas</button>
+            <button onclick="addSelectedMusic()"><i class="fas fa-plus"></i> Adicionar Músicas</button>
 
             <ul id="playlist"></ul>
 
@@ -51,9 +52,9 @@
                 <p>Artist Name</p>
             </div>
             <div id="song-controls">
-                <button id="play-btn">Play</button>
-                <button id="skip-btn">Skip</button>
-                <button id="prev-btn">Previous</button>
+                <button id="play-btn" onclick="playMusic()"><i class="fas fa-play"></i></button>
+                <button id="pause-btn" onclick="pauseMusic()"><i class="fas fa-pause"></i></button>
+                <button id="stop-btn" onclick="stopMusic()"><i class="fas fa-stop"></i></button>
             </div>
         </section>
     </main>
