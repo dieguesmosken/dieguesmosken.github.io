@@ -132,8 +132,8 @@ function iniciarJogo() {
     }
 
     function updateMaxScore() {
-        if (snake.length > maxScore) {
-            maxScore = snake.length;
+        if ((snake.length - 1) > maxScore) {
+            maxScore = (snake.length - 1) ;
             localStorage.setItem(username, maxScore);
         }
     }
@@ -179,6 +179,18 @@ function iniciarJogo() {
 
     
 }
+
+// Atualizar a pontuação atual
+function atualizarPontuacao(pontuacao) {
+    document.getElementById('pontuacaoAtual').textContent = pontuacao;
+  }
+
+  // Exemplo de atualização da pontuação
+  setInterval(function() {
+    // Simulação de pontuação atualizada
+    var novaPontuacao = Math.floor(Math.random() * 100);
+    atualizarPontuacao(novaPontuacao);
+  }, 1000);
 
 let jogo = setInterval(iniciarJogo, 100);
 
