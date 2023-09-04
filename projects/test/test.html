@@ -1,13 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>by @dieguesmosken</title>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <iframe src="https://github.com/dieguesmosken/dieguesmosken" width="600" height="400" frameborder="0" scrolling="auto">
-    </iframe>
-      
+    <header>
+        <h1>Music Player</h1>
+    </header>
+
+    <main>
+        <section id="playlist">
+            <input type="file" id="music-files" multiple>
+            <button onclick="addSelectedMusic()">Adicionar Músicas</button>
+
+            <ul id="playlist"></ul>
+
+            <script>
+                function addSelectedMusic() {
+                    const fileInput = document.getElementById('music-files');
+                    const files = fileInput.files;
+                    const playlist = document.getElementById('playlist');
+
+                    for (let i = 0; i < files.length; i++) {
+                        const file = files[i];
+                        const listItem = document.createElement('li');
+                        listItem.textContent = file.name;
+                        playlist.appendChild(listItem);
+
+                        const audioPlayer = document.createElement('audio');
+                        audioPlayer.src = URL.createObjectURL(file);
+                        audioPlayer.controls = true;
+                        audioPlayer.addEventListener('load', function() {
+                            audioPlayer.play();
+                        });
+                        listItem.appendChild(audioPlayer);
+                    }
+                }
+            </script>
+        </section>
+
+        <section id="now-playing">
+            <h2>Now Playing</h2>
+            <div id="song-info">
+                <h3>Song Title</h3>
+                <p>Artist Name</p>
+            </div>
+            <div id="song-controls">
+                <button id="play-btn">Play</button>
+                <button id="skip-btn">Skip</button>
+                <button id="prev-btn">Previous</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2022 Music Player. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>
