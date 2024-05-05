@@ -104,7 +104,7 @@ body{
 .apresentacao__imagem{
     width: 50%;
     border-radius: 50%;
-    border: 3px solid var(--cor-secundaria);
+    border: 5px solid var(--cor-secundaria);
     background-color: var(--cor-terciaria);
 
 }
