@@ -103,7 +103,10 @@ body{
 
 .apresentacao__imagem{
     width: 50%;
-    border-radius: 25px;
+    border-radius: 50%;
+    border: 3px solid var(--cor-secundaria);
+    background-color: var(--cor-terciaria);
+
 }
 .rodape{
     color: var(--cor-primaria);
