@@ -108,6 +108,21 @@ body{
     background-color: var(--cor-terciaria);
 
 }
+.apresentacao__email {
+    font-family: var(--fonte-secundaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px; /* Para dar um espaçamento do texto anterior */
+    transition: color 0.3s ease; /* Transição suave para hover */
+}
+
+.apresentacao__email:hover {
+    color: var(--cor-hover); /* Muda a cor ao passar o mouse */
+}
+
 .rodape{
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
