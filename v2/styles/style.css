@@ -76,7 +76,7 @@ body{
     font-family: var(--fonte-primaria);
     font-weight: 400;
     font-size: 1.5rem;
-}/*
+}
 .apresentacao__links__navegacao{
     display: flex;
     justify-content: center;
@@ -95,26 +95,7 @@ body{
 .apresentacao__links__navegacao:hover{
     background-color: var(--cor-hover);
     color: var(--cor-secundaria);
-} teste*/
-/* Estilo para o botão */
-.apresentacao__links__navegacao.botao {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 10px;
-    background-color: #4CAF50; /* Cor de fundo */
-    color: white; /* Cor do texto */
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.apresentacao__links__navegacao.botao:hover {
-    background-color: #45a049; /* Cor quando o mouse passa por cima */
-}
-
+} 
 .apresentacao__icone {
     font-size: 1.5rem;
     color: var(--cor-terciaria) ;
