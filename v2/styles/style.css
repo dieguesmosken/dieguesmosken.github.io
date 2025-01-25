@@ -1,42 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap');
-
-:root {
-    --cor-primaria: #000000;
-    --cor-secundaria: #c9c9c9;
-    --cor-terciaria: #ff4800;
-    --cor-hover: #3e1200;
-    --fonte-primaria: 'Krona One', sans-serif;
-    --fonte-secundaria: 'Montserrat', sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    box-sizing: border-box;
-    background-color: var(--cor-primaria);
-    color: var(--cor-secundaria);
-}
-
-.cabecalho {
-    padding: 2% 0% 0% 15%;
-}
-
-.cabecalho__menu {
-    display: flex;
-    gap: 80px;
-}
-
-.cabecalho__menu__link {
-    font-family: var(--fonte-secundaria);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--cor-terciaria);
-    text-decoration: none;
-}
-
+/* Layout e estilo geral para a página de Projetos */
 .apresentacao {
     padding: 5% 15%;
     display: flex;
@@ -66,13 +28,7 @@ body {
     font-family: var(--fonte-secundaria);
 }
 
-.apresentacao__links {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grades responsivas */
-    gap: 16px; /* Espaço entre os itens */
-    width: 100%;
-}
-
+/* Estilos para links e navegação da página de projetos */
 .apresentacao__links__subtitulo {
     font-family: var(--fonte-primaria);
     font-weight: 400;
@@ -105,40 +61,11 @@ body {
     font-size: 1.5rem;
     color: var(--cor-terciaria);
 }
+
+/* Estilos para a imagem da página de projetos */
 .apresentacao__imagem {
     width: 50%;
     border-radius: 50%;
     border: 5px solid var(--cor-secundaria);
     background-color: var(--cor-terciaria);
-}
-
-
-.rodape {
-    color: var(--cor-primaria);
-    background-color: var(--cor-terciaria);
-    padding: 24px;
-    text-align: center;
-    font-family: var(--fonte-secundaria);
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 1200px) {
-    .cabecalho {
-        padding: 10%;
-    }
-
-    .cabecalho__menu {
-        justify-content: center;
-    }
-
-    .apresentacao {
-        flex-direction: column;
-        padding: 5%;
-    }
-    
-    .apresentacao__conteudo {
-        width: auto;
-    }
 }
