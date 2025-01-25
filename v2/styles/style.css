@@ -30,7 +30,6 @@ body {
 }
 
 .cabecalho__menu {
-    display: flex;
     gap: 80px;
 }
 
@@ -45,16 +44,12 @@ body {
 /* Estilos para a apresentação */
 .apresentacao {
     padding: 5% 15%;
-    display: flex;
-    flex-direction: column;
     align-items: center;
     gap: 40px;
 }
 
 .apresentacao__conteudo {
     width: 100%;
-    display: flex;
-    flex-direction: column;
     gap: 40px;
 }
 
@@ -80,7 +75,6 @@ body {
 }
 
 .apresentacao__links__navegacao {
-    display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px;
