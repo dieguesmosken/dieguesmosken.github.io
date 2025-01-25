@@ -5,164 +5,115 @@
     --cor-secundaria: #c9c9c9;
     --cor-terciaria: #ff4800;
     --cor-hover: #3e1200;
-    /* --cor-primaria: #454545;
-    --cor-secundaria: #FFE6C7;
-    --cor-terciaria: #FF6000;
-    --cor-hover: #FFA559; */
-
     --fonte-primaria: 'Krona One', sans-serif;
     --fonte-secundaria: 'Montserrat', sans-serif;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     box-sizing: border-box;
     background-color: var(--cor-primaria);
     color: var(--cor-secundaria);
 }
 
-.cabecalho{
+.cabecalho {
     padding: 2% 0% 0% 15%;
 }
-.cabecalho__menu{
+
+.cabecalho__menu {
     display: flex;
     gap: 80px;
 }
-.cabecalho__menu__link{
+
+.cabecalho__menu__link {
     font-family: var(--fonte-secundaria);
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-terciaria);
     text-decoration: none;
 }
-.apresentacao{
+
+.apresentacao {
     padding: 5% 15%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 82px;
+    gap: 40px;
 }
-.apresentacao__conteudo{
-    width: 50%;
+
+.apresentacao__conteudo {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-.apresentacao__conteudo__titulo{
+.apresentacao__conteudo__titulo {
     font-size: 2.25rem;
     font-family: var(--fonte-primaria);
 }
-.titulo-destaque{
+
+.titulo-destaque {
     color: var(--cor-terciaria);
 }
-.apresentacao__conteudo__texto{
+
+.apresentacao__conteudo__texto {
     font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
 }
 
-.apresentacao__links{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    gap: 32px;
+.apresentacao__links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grades responsivas */
+    gap: 16px; /* Espaço entre os itens */
+    width: 100%;
 }
 
-.apresentacao__links__subtitulo{
+.apresentacao__links__subtitulo {
     font-family: var(--fonte-primaria);
     font-weight: 400;
     font-size: 1.5rem;
 }
-.apresentacao__links__navegacao{
+
+.apresentacao__links__navegacao {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 16px;
     border: 2px solid var(--cor-terciaria);
-    width: 50%;
-    text-align: center;
-    border-radius: 8px;
-    font-size: 1.4rem;
-    font-weight: 600;
-    padding: 21.5px;
-    text-decoration: none;
-    color: var(--cor-secundaria);
-    font-family: var(--fonte-secundaria);
-}
-.apresentacao__links__navegacao:hover{
-    background-color: var(--cor-hover);
-    color: var(--cor-secundaria);
-} 
-
-/* Estilos para a seção de projetos do GitHub */
-#github-projects {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 16px; /* Espaço entre os projetos */
-    margin-top: 20px;
-}
-
-/* Estilo para os links dos projetos do GitHub */
-.apresentacao__links__navegacao.github {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    border: 2px solid var(--cor-terciaria);
-    width: 60%; /* Ajuste para que os links não ocupem toda a largura */
-    text-align: center;
-    border-radius: 8px;
-    font-size: 1.4rem;
-    font-weight: 600;
     padding: 16px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
     text-decoration: none;
     color: var(--cor-secundaria);
     font-family: var(--fonte-secundaria);
     transition: background-color 0.3s ease;
 }
 
-.apresentacao__links__navegacao.github:hover {
+.apresentacao__links__navegacao:hover {
     background-color: var(--cor-hover);
     color: var(--cor-secundaria);
 }
 
-/* Adiciona um ícone específico para os projetos do GitHub */
-.apresentacao__icone.github {
+.apresentacao__icone {
     font-size: 1.5rem;
     color: var(--cor-terciaria);
 }
-
-.apresentacao__icone {
-    font-size: 1.5rem;
-    color: var(--cor-terciaria) ;
-}
-
-.apresentacao__imagem{
+.apresentacao__imagem {
     width: 50%;
     border-radius: 50%;
     border: 5px solid var(--cor-secundaria);
     background-color: var(--cor-terciaria);
-
-}
-.apresentacao__email {
-    font-family: var(--fonte-secundaria);
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--cor-terciaria);
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 10px; /* Para dar um espaçamento do texto anterior */
-    transition: color 0.3s ease; /* Transição suave para hover */
 }
 
-.apresentacao__email:hover {
-    color: var(--cor-hover); /* Muda a cor ao passar o mouse */
-}
 
-.rodape{
+.rodape {
     color: var(--cor-primaria);
     background-color: var(--cor-terciaria);
     padding: 24px;
@@ -172,18 +123,22 @@ body{
     font-weight: 400;
 }
 
+/* Responsividade para telas menores */
 @media (max-width: 1200px) {
-    .cabecalho{
-         padding: 10%;  
+    .cabecalho {
+        padding: 10%;
     }
-    .cabecalho__menu{
+
+    .cabecalho__menu {
         justify-content: center;
     }
-    .apresentacao{
-        flex-direction: column-reverse;
+
+    .apresentacao {
+        flex-direction: column;
         padding: 5%;
     }
-    .apresentacao__conteudo{
+    
+    .apresentacao__conteudo {
         width: auto;
     }
 }
