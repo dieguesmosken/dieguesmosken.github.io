@@ -21,6 +21,7 @@
         <section class="apresentacao__conteudo">
             <h1 class="apresentacao__conteudo__titulo">Projetos</h1>
 
+            <!-- Seus outros projetos -->
             <h2 class="apresentacao__links__subtitulo">Challenges Alura</h2>
             <a class="apresentacao__links__navegacao" href="https://dieguesmosken.github.io/challanges-alura-oracle-ONE-T6/challange-01/index.html">
                 <i class="apresentacao__icone fa-brands fa-github"></i>
@@ -34,6 +35,11 @@
                 Acessar Encurtador de Links
             </a>
 
+            <!-- Seção para exibir projetos do GitHub -->
+            <h2 class="apresentacao__links__subtitulo">Projetos em que estou trabalhando</h2>
+            <div id="github-projects" class="apresentacao__links">
+                <!-- Os projetos do GitHub serão inseridos aqui pelo JavaScript -->
+            </div>
         </section>
         <img class="apresentacao__imagem" src="assets/user1.png" alt="Foto de Matheus Mosken Diegues">
     </main>
@@ -41,6 +47,27 @@
     <footer class="rodape">
         <p>Desenvolvido por @dieguesmosken.</p>
     </footer>
+
+    <script>
+        // Função para carregar os projetos do GitHub
+        fetch('https://api.github.com/users/dieguesmosken/repos?sort=pushed')
+            .then(response => response.json())
+            .then(data => {
+                const projectContainer = document.getElementById('github-projects');
+                
+                // Adiciona os projetos na página
+                data.forEach(project => {
+                    const projectLink = document.createElement('a');
+                    projectLink.classList.add('apresentacao__links__navegacao');
+                    projectLink.href = project.html_url;
+                    projectLink.target = '_blank';
+                    projectLink.innerHTML = `<i class="apresentacao__icone fa-brands fa-github"></i>${project.name}`;
+
+                    projectContainer.appendChild(projectLink);
+                });
+            })
+            .catch(error => console.error('Erro ao carregar os projetos do GitHub:', error));
+    </script>
 </body>
 
 </html>
