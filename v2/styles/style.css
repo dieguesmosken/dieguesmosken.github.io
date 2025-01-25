@@ -96,6 +96,45 @@ body{
     background-color: var(--cor-hover);
     color: var(--cor-secundaria);
 } 
+
+/* Estilos para a seção de projetos do GitHub */
+#github-projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Espaço entre os projetos */
+    margin-top: 20px;
+}
+
+/* Estilo para os links dos projetos do GitHub */
+.apresentacao__links__navegacao.github {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    width: 60%; /* Ajuste para que os links não ocupem toda a largura */
+    text-align: center;
+    border-radius: 8px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 16px;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-secundaria);
+    transition: background-color 0.3s ease;
+}
+
+.apresentacao__links__navegacao.github:hover {
+    background-color: var(--cor-hover);
+    color: var(--cor-secundaria);
+}
+
+/* Adiciona um ícone específico para os projetos do GitHub */
+.apresentacao__icone.github {
+    font-size: 1.5rem;
+    color: var(--cor-terciaria);
+}
+
 .apresentacao__icone {
     font-size: 1.5rem;
     color: var(--cor-terciaria) ;
