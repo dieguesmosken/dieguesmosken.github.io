@@ -1,10 +1,4 @@
 version = 1
 
 [[analyzers]]
-name = "html"
-
-[[analyzers]]
 name = "javascript"
-
-[[analyzers]]
-name = "css"
