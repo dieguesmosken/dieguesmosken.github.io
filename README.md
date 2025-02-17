@@ -1,3 +1,4 @@
+[![pages-build-deployment](https://github.com/dieguesmosken/dieguesmosken.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/dieguesmosken/dieguesmosken.github.io/actions/workflows/pages/pages-build-deployment)
 # dieguesmosken.github.io
 ## meu portifolio v1
 
