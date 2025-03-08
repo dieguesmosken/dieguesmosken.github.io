@@ -16,10 +16,40 @@
             margin-top: 20%;
             font-family: Arial, sans-serif;
         }
+    
+    /*barra de progresso com loading */
+   
+        .loader {
+            border: 16px solid #f3f3f3;
+            border-top: 16px solid #4E9F3D;
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+            margin: auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <p>Carregando...</p>
+<!-- site em manuenção -->
     <script>
+        
+        setTimeout(() => {
+            window.location.href = '/v2/error.html';
+        }, 2000);
+    </script>
+    
+</body>
+    <!-- <script>
         setTimeout(() => {
             window.location.href = '/v2/index.html';
         }, 1000);
-    </script>
+    </script> -->
 </html>
