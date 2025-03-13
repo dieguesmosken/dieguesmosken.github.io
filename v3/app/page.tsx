@@ -1,5 +1,27 @@
 import React from "react";
 
+/**
+ * Portfolio component representing a personal portfolio page.
+ * 
+ * @returns {JSX.Element} The rendered portfolio page.
+ * 
+ * @component
+ * @example
+ * return (
+ *   <Portfolio />
+ * )
+ * 
+ * @description
+ * The Portfolio component is a functional React component that renders a personal portfolio page.
+ * It includes a header with navigation links, a main section with a brief introduction and links to social media profiles,
+ * and a footer with personal information and copyright details.
+ * 
+ * @remarks
+ * The component uses Tailwind CSS classes for styling and FontAwesome icons for social media links.
+ * 
+ * @see {@link https://github.com/dieguesmosken} GitHub Profile
+ * @see {@link https://linkedin.com/in/dieguesmosken} LinkedIn Profile
+ */
 const Portfolio: React.FC = () => {
   return (
     <div className="flex flex-col min-h-screen">
