@@ -19,3 +19,14 @@
 
 ![imagem index v2](https://github.com/dieguesmosken/dieguesmosken.github.io/blob/main/assets/Img/indexv2.png?raw=true)
 >31/03/2024 fonte: do proprio autor.
+>
+# www.teuzin.com.br
+## meu portifolio v3
+
+
+> construido por **[TeuzinYTBR](https:www.badwolf3d.com.br)**
+>
+> [link portifolio](https://www.teuzin.com.br/v3/)
+
+![imagem index v3](https://github.com/dieguesmosken/dieguesmosken.github.io/blob/main/assets/Img/indexv3.png?raw=true)
+>13/03/2025 fonte: do proprio autor.
