@@ -33,3 +33,103 @@
     font-size: 1.5rem;
     color: var(--cor-terciaria);
 }
+
+/* Grid de projetos ocupa quase toda a largura, com margens laterais */
+.github-projects-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+    width: 100%;
+    max-width: 1800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+@media (max-width: 900px) {
+    .github-projects-cards {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .github-projects-cards {
+        grid-template-columns: 1fr;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+}
+
+.github-project-card {
+    background: #181c24;
+    border: 1.5px solid var(--cor-terciaria, #3a3f4b);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 20px 18px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 170px;
+}
+
+.github-project-card:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+    background: #23283a;
+}
+
+.github-project-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.github-project-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--cor-secundaria, #fff);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.github-project-title:hover {
+    text-decoration: underline;
+    color: var(--cor-terciaria, #00bfff);
+}
+
+.github-project-desc {
+    font-size: 1rem;
+    color: #b0b8c1;
+    margin-bottom: 12px;
+    min-height: 40px;
+}
+
+.github-project-info {
+    display: flex;
+    gap: 16px;
+    font-size: 0.98rem;
+    color: #a0a8b3;
+    align-items: center;
+}
+
+.github-project-lang {
+    font-weight: 600;
+    color: var(--cor-terciaria, #00bfff);
+}
+
+.github-project-info i {
+    margin-right: 4px;
+    color: #ffd700;
+}
+
+/* Ajuste para a página de projetos ocupar toda a largura */
+body.projects-page .apresentacao__conteudo {
+    width: 100%;
+    max-width: 100%;
+}

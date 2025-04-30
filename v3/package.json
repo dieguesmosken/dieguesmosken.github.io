@@ -12,7 +12,8 @@
     "@testing-library/react": "^16.2.0",
     "next": "15.2.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "v3": "file:"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

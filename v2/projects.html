@@ -17,6 +17,8 @@
         <nav class="cabecalho__menu">
             <a class="cabecalho__menu__link" href="index.html">Home</a>
             <a class="cabecalho__menu__link" href="about.html">Sobre mim</a>
+            <a class="cabecalho__menu__link" href="projects.html">Projetos</a>
+            <a class="cabecalho__menu__link" href="posts.html">Posts</a>
         </nav>
     </header>
 
@@ -44,8 +46,16 @@
 
             <!-- Seção para exibir projetos do GitHub -->
             <h2 class="apresentacao__links__subtitulo">Repositorios Publicos do Meu Github</h2>
-            <div id="github-projects" class="apresentacao__links">
+            <div id="github-projects" class="apresentacao__links github-projects-cards">
                 <!-- Os projetos do GitHub serão inseridos aqui pelo JavaScript -->
+            </div>
+
+            <!-- Modal para detalhes do projeto -->
+            <div id="project-modal" class="project-modal" style="display:none;">
+                <div class="project-modal-content">
+                    <span class="project-modal-close" id="close-modal">&times;</span>
+                    <div id="modal-details"></div>
+                </div>
             </div>
         </section>
     </main>
@@ -60,19 +70,58 @@
             .then(response => response.json())
             .then(data => {
                 const projectContainer = document.getElementById('github-projects');
-                
-                // Adiciona os projetos na página
+                projectContainer.innerHTML = '';
                 data.forEach(project => {
-                    const projectLink = document.createElement('a');
-                    projectLink.classList.add('apresentacao__links__navegacao');
-                    projectLink.href = project.html_url;
-                    projectLink.target = '_blank';
-                    projectLink.innerHTML = `<i class="apresentacao__icone fa-brands fa-github"></i>${project.name}`;
-
-                    projectContainer.appendChild(projectLink);
+                    const card = document.createElement('div');
+                    card.className = 'github-project-card';
+                    card.innerHTML = `
+                        <div class="github-project-header">
+                            <a href="${project.html_url}" target="_blank" class="github-project-title" onclick="event.stopPropagation()">
+                                <i class="apresentacao__icone fa-brands fa-github"></i> ${project.name}
+                            </a>
+                        </div>
+                        <div class="github-project-desc">${project.description ? project.description : 'Sem descrição.'}</div>
+                        <div class="github-project-info">
+                            <span class="github-project-lang">${project.language ? project.language : 'N/A'}</span>
+                            <span title="Estrelas"><i class="fa fa-star"></i> ${project.stargazers_count}</span>
+                            <span title="Forks"><i class="fa fa-code-fork"></i> ${project.forks_count}</span>
+                        </div>
+                    `;
+                    card.addEventListener('click', function() {
+                        showProjectModal(project);
+                    });
+                    projectContainer.appendChild(card);
                 });
             })
             .catch(error => console.error('Erro ao carregar os projetos do GitHub:', error));
+
+        // Função para mostrar o modal com detalhes do projeto
+        function showProjectModal(project) {
+            const modal = document.getElementById('project-modal');
+            const details = document.getElementById('modal-details');
+            details.innerHTML = `
+                <h2>${project.name}</h2>
+                <p><strong>Descrição:</strong> ${project.description ? project.description : 'Sem descrição.'}</p>
+                <p><strong>Linguagem:</strong> ${project.language ? project.language : 'N/A'}</p>
+                <p><strong>Estrelas:</strong> ${project.stargazers_count}</p>
+                <p><strong>Forks:</strong> ${project.forks_count}</p>
+                <p><strong>Criado em:</strong> ${new Date(project.created_at).toLocaleDateString()}</p>
+                <p><strong>Última atualização:</strong> ${new Date(project.updated_at).toLocaleDateString()}</p>
+                <p><a href="${project.html_url}" target="_blank">Ver no GitHub</a></p>
+            `;
+            modal.style.display = 'block';
+        }
+        // Fechar modal ao clicar no X
+        document.getElementById('close-modal').onclick = function() {
+            document.getElementById('project-modal').style.display = 'none';
+        };
+        // Fechar modal ao clicar fora do conteúdo
+        window.onclick = function(event) {
+            const modal = document.getElementById('project-modal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
     </script>
 </body>
 
