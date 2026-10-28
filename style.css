@@ -69,3 +69,5 @@ dd{margin:0}
   .lado .f:first-child{grid-column:1/-1}
 }
 @media(max-width:520px){.lado{grid-template-columns:1fr}.sona{max-width:260px;margin:0 auto}}
+
+.banner{display:block;width:100%;height:auto;border-radius:10px;margin-bottom:16px}
