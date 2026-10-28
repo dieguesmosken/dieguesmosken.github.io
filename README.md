@@ -4,7 +4,7 @@
 
 # Oi, eu sou o Matheus! 💜
 
-**24 anos · dev · streamer · furry 🐺 · também conhecido como Teuzin**
+**24 anos · dev · streamer · furry  · também conhecido como Teuzin**
 
 [Twitch](https://twitch.tv/teuzin0dev) · [Discord](https://discord.gg/UPSSNs3xTZ) · [Instagram](https://instagram.com/teuzin0dev) · [X](https://x.com/teuzin0dev) · [Steam](https://steamcommunity.com/id/dieguesmosken/) · [LivePix](https://livepix.gg/teuzin0dev) · [GitHub](https://github.com/dieguesmosken) · [Telegram](https://t.me/TeuzinYTBR)
 
@@ -16,7 +16,7 @@ Desde que me entendo por gente eu gosto de personagens antropomórficos. Nunca t
 
 Quando conheci a comunidade, ela chegou com um grande abraço. Fui recebido de braços abertos, com carinho. Foi por isso que decidi usar o **Teyo**, minha sona, como a imagem das minhas lives e do meu canal.
 
-## Teyo, minha sona 🐺
+## Teyo, minha sona 
 
 Lobo de pelagem cinza, cabelo roxo e olhos de cores diferentes (um amarelo e um verde). Ele aparece no overlay, nos alertas, no PNGtuber e na tela de "já volto" das lives. A cor oficial é o roxo.
 

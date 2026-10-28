@@ -1,21 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacman</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Pac-Man · teuzin0dev</title>
+<style>
+  :root { --bg:#0e0820; --painel:#1c1038; --borda:#7b2cf2; --lilas:#a970ff; --texto:#f1ebff; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; background: var(--bg); color: var(--texto);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+    padding: 12px; touch-action: none; user-select: none;
+  }
+  .moldura {
+    border: 2px solid var(--borda); border-radius: 14px; background: var(--painel);
+    padding: 8px; box-shadow: 0 0 0 1px #0004, 0 10px 40px #7b2cf233;
+  }
+  canvas { display: block; width: min(92vw, 540px); height: auto; border-radius: 8px; background: #000; image-rendering: auto; }
+  p { margin: 0; font-size: 14px; color: #b9a8e0; text-align: center; }
+  a { color: var(--lilas); }
+</style>
 </head>
-<body style="margin: 0px; background-color: black; overflow-y: hidden; overflow-x: hidden;">
-    <canvas id="canvas" width="1000" height="1000"></canvas>
-    <div style="display: none">
-        <img src="assets/animations.gif" id="animations" alt=""/>
-        <img src="assets/ghost.png" id="ghosts" alt=""/>
-
-    </div>
-    
-    <script src="ghost.js"></script>
-    <script src="pacman.js"></script>
-    <script src="game.js"></script>
+<body>
+  <div class="moldura"><canvas id="canvas" width="570" height="700"></canvas></div>
+  <p>Setas ou WASD para mover · P ou espaço pausa · no celular, arraste na tela<br><a href="../../index.html">voltar ao arquivo</a></p>
+  <script src="game.js"></script>
 </body>
 </html>
