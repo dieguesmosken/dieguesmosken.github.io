@@ -4,7 +4,7 @@
 
 # Oi, eu sou o Matheus! 💜
 
-**22 anos · dev · streamer · furry 🐺 · também conhecido como Teuzin**
+**24 anos · dev · streamer · furry 🐺 · também conhecido como Teuzin**
 
 [Twitch](https://twitch.tv/teuzin0dev) · [YouTube](https://www.youtube.com/@teuzin0dev) · [GitHub](https://github.com/dieguesmosken) · [Telegram](https://t.me/TeuzinYTBR)
 
@@ -33,11 +33,11 @@ Desenvolvedor com foco em front-end, graduando em Desenvolvimento de Software Mu
 
 `HTML` `CSS` `JavaScript` `TypeScript` `React` `Next.js` `Tailwind`
 
-## Portfólio
+## Sobre este repositório
 
-O site deste repositório (`dieguesmosken.github.io`, também em [www.teuzin.com.br](https://www.teuzin.com.br)) é a minha página pessoal. As versões antigas do portfólio continuam no ar:
+O site (`dieguesmosken.github.io`, também em [www.teuzin.com.br](https://www.teuzin.com.br)) é a minha página pessoal:
 
-- [Portfólio v2](https://www.teuzin.com.br/v2/index.html)
-- [Portfólio v3](https://www.teuzin.com.br/v3/)
+- `index.html`, `sobre.html`, `lives.html`, `programacao.html`: o site atual
+- `archive/`: versões antigas do portfólio (v1, v2, v3), jogos e experimentos
 
 [![pages-build-deployment](https://github.com/dieguesmosken/dieguesmosken.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/dieguesmosken/dieguesmosken.github.io/actions/workflows/pages/pages-build-deployment)
