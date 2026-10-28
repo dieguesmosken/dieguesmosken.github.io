@@ -6,7 +6,7 @@
 
 **24 anos · dev · streamer · furry 🐺 · também conhecido como Teuzin**
 
-[Twitch](https://twitch.tv/teuzin0dev) · [YouTube](https://www.youtube.com/@teuzin0dev) · [GitHub](https://github.com/dieguesmosken) · [Telegram](https://t.me/TeuzinYTBR)
+[Twitch](https://twitch.tv/teuzin0dev) · [Discord](https://discord.gg/UPSSNs3xTZ) · [Instagram](https://instagram.com/teuzin0dev) · [X](https://x.com/teuzin0dev) · [Steam](https://steamcommunity.com/id/dieguesmosken/) · [LivePix](https://livepix.gg/teuzin0dev) · [GitHub](https://github.com/dieguesmosken) · [Telegram](https://t.me/TeuzinYTBR)
 
 </div>
 
@@ -24,8 +24,7 @@ Lobo de pelagem cinza, cabelo roxo e olhos de cores diferentes (um amarelo e um 
 
 - Lives na Twitch: [twitch.tv/teuzin0dev](https://twitch.tv/teuzin0dev)
 - Jogos, bate-papo e programação
-- Vídeos no YouTube
-- Meta atual: uma câmera e uma luz novas para melhorar a qualidade das lives
+- Meta atual: uma câmera e uma luz novas para melhorar a qualidade das lives (apoie via [LivePix](https://livepix.gg/teuzin0dev))
 
 ## Programação
 
