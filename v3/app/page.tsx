@@ -56,13 +56,12 @@ const Portfolio: React.FC = () => {
             </div>
           </div>
         </section>
-        <img className="w-48 md:w-64 rounded-full mt-6 md:mt-0" src="assets/user1.png" alt="Foto de Matheus Mosken Diegues" />
+        <img className="w-48 md:w-64 rounded-full mt-6 md:mt-0" src="assets/user1.png" alt="Foto de Matheus" />
       </main>
 
       {/* Rodapé */}
       <footer className="bg-gray-900 text-white text-center p-4">
         <p>Desenvolvido por @dieguesmosken.</p>
-        <p>55730362 MATHEUS MOSKEN DIEGUES</p>
         <p>CNPJ: 55.730.362/0001-20</p>
         <p>Todos os direitos reservados &copy; 2025</p>
       </footer>

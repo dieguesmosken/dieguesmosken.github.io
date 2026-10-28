@@ -9,7 +9,7 @@ export default function About() {
           Desenvolvedor Front-end com especialidade em HTML e CSS. Ajudo pequenos negócios e designers a colocarem em prática boas ideias.
         </p>
         <p className="mt-4 text-lg text-gray-700">
-          Sou Matheus Mosken Diegues, formado em Desenvolvimento de Sistemas e atualmente graduando em Desenvolvimento de Software Multiplataforma.
+          Sou Matheus, formado em Desenvolvimento de Sistemas e atualmente graduando em Desenvolvimento de Software Multiplataforma.
         </p>
         <a className="text-blue-500 text-lg mt-4" href="mailto:contato@badwolf3d.com.br">contato@badwolf3d.com.br</a>
       </div>

@@ -1,55 +1,140 @@
-<!-- pagina de redirecionamento automatico para a pagina /v2/erro.html -->
-<!-- com uma barra de loading no meio da tela por 1 segundo -->
-<!-- e depois redireciona para a pagina de erro -->
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loading...</title>
+    <title>Matheus · teuzin0dev</title>
+    <meta name="description" content="Matheus, 22 anos. Dev, streamer e furry. Conheça o Teyo, minha sona, minhas lives e meu canal.">
+    <link rel="icon" href="assets/Img/teyo-icon.png">
     <style>
+        :root {
+            --bg: #0e0820;
+            --card: #1a1033;
+            --borda: #3a2470;
+            --roxo: #7b2cf2;
+            --lilas: #a970ff;
+            --texto: #f1ebff;
+            --suave: #b9a8e0;
+        }
+        * { box-sizing: border-box; }
         body {
-            background-color: #000;
-            color: #fff;
-            font-size: 50px;
-            text-align: center;
-            margin-top: 20%;
-            font-family: Arial, sans-serif;
+            margin: 0;
+            background: radial-gradient(circle at 20% 0%, #2a1060 0%, var(--bg) 55%);
+            color: var(--texto);
+            font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+            line-height: 1.65;
         }
-    
-    /*barra de progresso com loading */
-   
-        .loader {
-            border: 16px solid #f3f3f3;
-            border-top: 16px solid #4E9F3D;
+        a { color: var(--lilas); }
+        main { max-width: 960px; margin: 0 auto; padding: 0 16px 48px; }
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 280px;
+            gap: 32px;
+            align-items: center;
+            padding: 64px 0 32px;
+        }
+        .hero h1 { margin: 0 0 4px; font-size: clamp(2rem, 6vw, 3.2rem); line-height: 1.1; }
+        .hero h1 span { color: var(--lilas); }
+        .tag { color: var(--suave); margin: 0 0 20px; font-size: 1.1rem; }
+        .hero img {
+            width: 100%;
             border-radius: 50%;
-            width: 120px;
-            height: 120px;
-            animation: spin 2s linear infinite;
-            margin: auto;
+            border: 4px solid var(--roxo);
+            background: #24124d;
+            box-shadow: 0 0 48px rgba(123, 44, 242, .45);
         }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+        .links a {
+            padding: 10px 18px;
+            border-radius: 999px;
+            border: 1px solid var(--borda);
+            background: var(--card);
+            text-decoration: none;
+            color: var(--texto);
+            font-weight: 600;
+        }
+        .links a.destaque { background: var(--roxo); border-color: var(--roxo); }
+        .links a:hover { border-color: var(--lilas); }
+        section {
+            background: var(--card);
+            border: 1px solid var(--borda);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 20px;
+        }
+        h2 { margin: 0 0 10px; color: var(--lilas); font-size: 1.3rem; }
+        p { margin: 0 0 12px; }
+        p:last-child { margin-bottom: 0; }
+        .grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .grade section { margin-top: 0; }
+        ul { margin: 0; padding-left: 20px; }
+        .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+        .chips li { padding: 4px 12px; border-radius: 999px; background: #2a1760; border: 1px solid var(--borda); font-size: .95rem; }
+        footer { text-align: center; color: var(--suave); padding: 28px 16px; font-size: .9rem; }
+        @media (max-width: 720px) {
+            .hero { grid-template-columns: 1fr; text-align: center; padding-top: 40px; }
+            .hero img { max-width: 220px; margin: 0 auto; order: -1; }
+            .links { justify-content: center; }
         }
     </style>
 </head>
 <body>
-    <div class="loader"></div>
-    <p>Carregando...</p>
-<!-- site em manuenção -->
-    <!-- <script>
-        
-        setTimeout(() => {
-            window.location.href = '/v2/error.html';
-        }, 2000);
-    </script>
-     -->
+    <main>
+        <header class="hero">
+            <div>
+                <h1>Oi, eu sou o <span>Matheus</span>!</h1>
+                <p class="tag">22 anos · dev · streamer · furry 🐺 · também conhecido como Teuzin</p>
+                <p>Programo, jogo, converso e faço lives na Twitch e vídeos no YouTube. Aqui você encontra um pouco de quem eu sou, da minha sona e do que eu faço.</p>
+                <div class="links">
+                    <a class="destaque" href="https://twitch.tv/teuzin0dev">Twitch</a>
+                    <a href="https://www.youtube.com/@teuzin0dev">YouTube</a>
+                    <a href="https://github.com/dieguesmosken">GitHub</a>
+                    <a href="https://t.me/TeuzinYTBR">Telegram</a>
+                </div>
+            </div>
+            <img src="assets/Img/teyo.png" alt="Teyo, a sona do Matheus: lobo cinza de cabelo roxo e olhos de cores diferentes">
+        </header>
+
+        <section>
+            <h2>Sou furry desde que me lembro</h2>
+            <p>Desde que me entendo por gente eu gosto de personagens antropomórficos, de bichos que falam, sentem e vivem aventuras. Nunca teve um dia em que eu "virei" furry: sempre foi parte de mim.</p>
+            <p>Quando conheci a comunidade, ela chegou com um grande abraço. Fui recebido de braços abertos, com carinho e gente de verdade do outro lado da tela. Foi por isso que decidi mostrar essa parte de mim nas lives e no canal.</p>
+        </section>
+
+        <section>
+            <h2>Conheça o Teyo, minha sona</h2>
+            <p>O Teyo é um lobo de pelagem cinza, cabelo roxo e olhos de cores diferentes, um amarelo e um verde. Ele é a minha cara nas lives e no canal: aparece no overlay, nos alertas, no PNGtuber e na tela de "já volto".</p>
+            <p>Roxo é a cor oficial por aqui, e vai do avatar até o último detalhe do stream.</p>
+        </section>
+
+        <div class="grade">
+            <section>
+                <h2>Lives e canal</h2>
+                <ul>
+                    <li>Lives na Twitch em <a href="https://twitch.tv/teuzin0dev">twitch.tv/teuzin0dev</a></li>
+                    <li>Jogos, bate-papo e programação</li>
+                    <li>Vídeos no YouTube</li>
+                    <li>Meta atual: uma câmera e uma luz novas para melhorar a qualidade das lives 💜</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Programação</h2>
+                <p>Sou desenvolvedor, com foco em front-end, e estou na graduação em Desenvolvimento de Software Multiplataforma.</p>
+                <ul class="chips">
+                    <li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Tailwind</li>
+                </ul>
+            </section>
+        </div>
+
+        <section>
+            <h2>Portfólio</h2>
+            <p>As versões antigas do meu portfólio continuam no ar:</p>
+            <ul>
+                <li><a href="v2/index.html">Portfólio v2</a></li>
+                <li><a href="v3/">Portfólio v3</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>Feito com 💜 pelo Matheus · teuzin0dev</footer>
 </body>
-    <script>
-        setTimeout(() => {
-            window.location.href = '/v2/index.html';
-        }, 1000);
-    </script>
 </html>

@@ -1,6 +1,6 @@
  // JS
 
- var content = 'Matheus Mosken Diegues. Tecnico em Desenvolvimento de Sistemas.';
+ var content = 'Matheus. Tecnico em Desenvolvimento de Sistemas.';
  var text = document.getElementById('text');
 
  var speed = 190;
