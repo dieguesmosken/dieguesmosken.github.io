@@ -134,3 +134,5 @@ h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--li
 .numeros b{display:block;font:700 1.15rem "Poppins",sans-serif;color:#fff}
 .numeros span{color:var(--apagado);font-size:13.5px}
 @media(max-width:640px){.numeros{grid-template-columns:1fr}.f{padding:18px 18px}}
+.linhaf{display:flex;justify-content:space-between;gap:12px;padding:10px 2px;width:100%;flex-wrap:wrap}
+.linhaf span{color:var(--apagado);font-size:14px}
