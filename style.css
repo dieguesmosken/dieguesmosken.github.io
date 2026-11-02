@@ -94,3 +94,43 @@ dd{margin:0}
 .destaque small{color:var(--apagado)}
 @media(max-width:760px){.proj{grid-template-columns:1fr}.destaque{grid-template-columns:1fr}}
 .rodape a{color:var(--apagado)}
+
+/* ===== camada profissional (v6): bordas finas, tipografia limpa, mais respiro ===== */
+:root{--fundo:#0b0715;--painel:#120b24;--borda:#2f2057;--linha:#2a1d4d;--lilas:#a970ff;--claro:#e3d4ff;--texto:#f3eefc;--apagado:#a595c9;--acento:#7b2cf2}
+body{background:radial-gradient(900px 480px at 10% -5%,#2a1262 0,transparent 60%),radial-gradient(700px 420px at 100% 0,#1c0c45 0,transparent 55%),var(--fundo);background-attachment:fixed;font:16px/1.65 "Inter","Segoe UI",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+.pagina{max-width:1080px;padding:20px 18px 28px;gap:18px}
+.f{border:1px solid var(--borda);border-radius:16px;background:linear-gradient(180deg,rgba(24,14,48,.92),rgba(16,9,34,.92));padding:22px 26px;box-shadow:0 8px 28px rgba(5,2,14,.35)}
+.topo{position:sticky;top:10px;z-index:5;backdrop-filter:blur(10px);padding:10px 18px;background:rgba(18,11,36,.85)}
+.topo img{border:1px solid var(--borda)}
+.topo b{font-weight:700;font-size:17px;letter-spacing:.01em}
+.topo small{color:var(--apagado)}
+.topo nav a{padding:6px 12px;font-weight:500;font-size:14.5px;border-radius:999px}
+.topo nav a:hover{background:rgba(123,44,242,.18)}
+.topo nav a.on{background:var(--acento);color:#fff}
+.grande{text-transform:none;font-weight:700;letter-spacing:-.02em;line-height:1.1;font-size:clamp(1.9rem,4.6vw,2.7rem)}
+.sub{color:var(--lilas);font-weight:500;letter-spacing:.01em}
+h2{font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;color:var(--lilas);margin:30px 0 10px;font-weight:700}
+.f > h2:first-child{margin-top:0}
+.legenda b{text-transform:none;font-size:20px}
+.lista li+li{border-top:1px solid var(--linha)}
+.lista a{padding:10px 2px}
+.btn{background:var(--acento);border:1px solid transparent;border-radius:10px;padding:8px 18px;font-weight:600;font-size:14.5px;box-shadow:0 4px 16px rgba(123,44,242,.35)}
+.btn:hover{background:#8d45ff;color:#fff}
+.btn.sec{background:transparent;border:1px solid var(--borda);box-shadow:none;color:var(--claro)}
+.btn.sec:hover{border-color:var(--lilas);background:rgba(123,44,242,.15)}
+.pix{padding:14px 24px}
+.banner{border-radius:12px;border:1px solid var(--borda)}
+.proj,.destaque a,.repos a{border:1px solid var(--linha);background:rgba(26,15,54,.6);border-radius:14px}
+.proj .shot{border:1px solid var(--borda)}
+.proj h2{text-transform:none;letter-spacing:0;font-size:1.35rem;color:#fff;margin:2px 0 6px}
+.tags li{background:rgba(123,44,242,.16);border:1px solid var(--linha);font-size:12.5px}
+.rodape{padding:10px}
+/* destaque da home */
+.hero{display:grid;grid-template-columns:1fr;gap:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 16px;padding:0;list-style:none}
+.chips li{font-size:13px;color:var(--claro);background:rgba(123,44,242,.16);border:1px solid var(--linha);border-radius:999px;padding:3px 12px}
+.numeros{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0 4px}
+.numeros div{border:1px solid var(--linha);border-radius:12px;padding:12px 14px;background:rgba(26,15,54,.5)}
+.numeros b{display:block;font:700 1.15rem "Poppins",sans-serif;color:#fff}
+.numeros span{color:var(--apagado);font-size:13.5px}
+@media(max-width:640px){.numeros{grid-template-columns:1fr}.f{padding:18px 18px}}
