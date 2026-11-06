@@ -175,3 +175,12 @@ footer a:hover{color:#fff}
 .burger{display:none;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;border:1px solid var(--line2);background:transparent;color:var(--text);font-size:18px;cursor:pointer}
 .wrap.prose{max-width:var(--max)}
 .wrap.prose > *{max-width:720px}
+/* lista de certificados e arquitetura */
+.certs{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.certs li{border:1px solid var(--line);border-radius:12px;padding:12px 16px;background:var(--card)}
+.certs b{display:block;font-size:14.5px;font-weight:600;color:#fff}
+.certs span{color:var(--muted);font-size:13px}
+.arch{margin:0 0 16px;padding-left:18px;color:var(--muted);font-size:14.5px}
+.arch li{margin-bottom:6px}
+.arch b{color:var(--soft)}
+.arch code,.prose code{font-size:12.5px;color:var(--soft);background:rgba(255,255,255,.06);padding:1px 6px;border-radius:5px}

@@ -37,8 +37,15 @@
 <a class="shot" href="https://recadin.com.br"><img src="assets/Img/projetos/recadin-demo.jpg" alt="Recadin: recado de Pix aparecendo no overlay da live" loading="lazy"></a>
 <div>
 <h3>Recadin <span class="badge">Beta fechado</span></h3>
-<p>Quem assiste manda um Pix e o recado aparece no OBS da live: lido por voz de IA, com som, vídeo ou a música pedida. O valor cai direto na conta Mercado Pago do streamer. Inclui metas, personalização do visual e fila de moderação para aprovar, pular ou recusar cada recado.</p>
-<ul class="tags"><li>Pix</li><li>Mercado Pago</li><li>Voz de IA</li><li>Moderação</li><li>Metas</li></ul>
+<p>Quem assiste manda um Pix e o recado aparece no OBS da live: lido por voz de IA, com som, vídeo ou a música pedida. O valor cai direto na conta Mercado Pago do streamer, e a comissão da plataforma é retida automaticamente. Inclui metas, personalização do visual e fila de moderação para aprovar, pular ou recusar cada recado.</p>
+<p><b style="color:#fff">Arquitetura:</b> serverless com custo zero de infraestrutura no plano gratuito da Cloudflare.</p>
+<ul class="arch">
+<li><b>Cloudflare Workers + Hono</b> servem o front-end em React + Vite, a API REST e os webhooks num único Worker.</li>
+<li><b>Mercado Pago Orders API</b> gera o Pix com <code>application_fee</code> para split de receita; webhooks validados por HMAC-SHA256 e tokens OAuth criptografados com AES-GCM.</li>
+<li><b>Durable Objects + WebSocket Hibernation</b> mantêm uma fila isolada por streamer e o overlay conectado em tempo real.</li>
+<li><b>D1, Queues e R2</b> guardam dados, geram o áudio de voz de forma assíncrona e entregam os arquivos ao OBS sem custo de saída.</li>
+</ul>
+<ul class="tags"><li>Cloudflare Workers</li><li>Hono</li><li>React</li><li>Mercado Pago Orders API</li><li>Pix</li><li>WebSockets</li><li>D1 · R2 · Queues</li></ul>
 <div class="acts"><a class="btn" href="https://recadin.com.br">Conhecer o Recadin</a></div>
 <p class="note">Acesso para streamers da Twitch, solicitado com a conta da Twitch.</p>
 </div>
