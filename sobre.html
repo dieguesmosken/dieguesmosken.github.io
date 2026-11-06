@@ -3,64 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sobre mim · teuzin0dev</title>
-<meta name="description" content="Matheus, desenvolvedor front-end e streamer. Formação, projetos e quem está por trás do teuzin0dev e do Recadin.">
-<meta property="og:title" content="Sobre mim · teuzin0dev">
-<meta property="og:description" content="Matheus, desenvolvedor front-end e streamer. Formação, projetos e quem está por trás do teuzin0dev e do Recadin.">
-<meta property="og:image" content="https://www.teuzin.com.br/assets/Img/teyo.png">
+<title>Sobre · Matheus Mosken Diegues</title>
+<meta name="description" content="Matheus Mosken Diegues, desenvolvedor front-end e criador do teuzin0dev. Formação, foco profissional e responsável pelos projetos.">
+<meta name="author" content="Matheus Mosken Diegues">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sobre · Matheus Mosken Diegues">
+<meta property="og:description" content="Matheus Mosken Diegues, desenvolvedor front-end e criador do teuzin0dev. Formação, foco profissional e responsável pelos projetos.">
+<meta property="og:image" content="https://www.teuzin.com.br/assets/Img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0716">
 <link rel="icon" href="assets/Img/teyo-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=1">
 </head>
 <body>
-<div class="pagina">
-<header class="f topo">
-<a class="quem" href="index.html"><img src="assets/Img/teyo-icon.png" alt=""><span><b>teuzin0dev</b><small>twitch.tv/teuzin0dev</small></span></a>
-<nav><a class=on href="sobre.html">sobre mim</a><a href="lives.html">lives</a><a href="programacao.html">programação</a><a href="projetos.html">projetos</a><a href="archive/index.html">arquivo</a></nav>
-</header>
-<div class="corpo">
-<main class="f">
-<img class="banner" src="assets/Img/banners/sobre.jpg" alt="Sobre mim" width="1200" height="300">
-<h1 class="grande">Sobre <em>mim</em></h1>
-<p class="sub">Matheus · desenvolvedor front-end e streamer</p>
-<p>Oi, eu sou o Matheus, tenho 24 anos e trabalho com desenvolvimento web, principalmente front-end, e com criação de conteúdo na Twitch como <b>teuzin0dev</b>. Gosto de transformar o que preciso nas minhas próprias lives em ferramentas que outros streamers também possam usar.</p>
-<h2>Formação e foco</h2>
-<ul class="lista">
-<li><span class="linhaf"><b>Técnico em Desenvolvimento de Sistemas</b><span>ETEC de Registro</span></span></li>
-<li><span class="linhaf"><b>Desenvolvimento de Software Multiplataforma</b><span>graduando · FATEC</span></span></li>
-<li><span class="linhaf"><b>Foco atual</b><span>front-end, ferramentas para streaming</span></span></li>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html"><img src="assets/Img/teyo-icon.png" alt="">Matheus Mosken Diegues<small>· teuzin0dev</small></a>
+<nav class="menu" id="menu"><a href="index.html">Início</a><a href="sobre.html" class="on">Sobre</a><a href="projetos.html">Projetos</a><a href="programacao.html">Tecnologias</a><a href="lives.html">Lives</a></nav>
+<a class="btn sm cta" href="index.html#contato">Contato</a>
+<button class="burger" aria-label="Abrir menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+</div></header>
+<main>
+<div class="page-head"><div class="wrap">
+<div class="eyebrow">Sobre</div>
+<h1>Matheus Mosken Diegues</h1>
+<p>Desenvolvedor front-end, criador de ferramentas para streaming e responsável pelos projetos publicados neste site.</p>
+</div></div>
+
+<section><div class="wrap prose">
+<p>Tenho 24 anos e trabalho com desenvolvimento web, principalmente front-end. Também faço transmissões na Twitch como <b>teuzin0dev</b>, e é de lá que vem boa parte das ideias: transformo o que preciso nas minhas próprias lives em ferramentas que outros criadores também possam usar.</p>
+<p>Hoje meu trabalho passa por interfaces, integrações com APIs de terceiros (como Twitch e Mercado Pago) e produtos completos, do protótipo à publicação.</p>
+
+<h2>Formação e credenciais</h2>
+<ul class="timeline">
+<li><b>Certificado em Checkout Pro</b><span>Mercado Pago Developers · 2026 · <a href="assets/certificados/mercado-pago-checkout-pro.pdf">ver certificado</a></span></li>
+<li><b>Técnico em Desenvolvimento de Sistemas</b><span>ETEC de Registro</span></li>
 </ul>
-<h2>O que eu faço</h2>
-<p>Crio sites e ferramentas para quem faz live: o <a href="projetos.html">TeuzinBetterChat</a> (chat e overlay para OBS), o OverlayKit (editor de overlays), a Expedição Abissal (jogo para o chat) e o <a href="https://recadin.com.br">Recadin</a>, um serviço de recados por Pix. Quase tudo roda no navegador e a maior parte é gratuita.</p>
-<h2>Quem está por trás</h2>
+
+<h2>Foco atual</h2>
+<p>Front-end com React e Next.js, integrações de pagamento e ferramentas que rodam no navegador para quem faz live.</p>
+
+<h2>O que eu já construí</h2>
+<p>O <a href="https://recadin.com.br">Recadin</a> (recados por Pix na live), o <a href="projetos.html">TeuzinBetterChat</a> (chat da Twitch para OBS), o OverlayKit (editor de overlays) e a Expedição Abissal (jogo para o chat). Os detalhes estão na <a href="projetos.html">página de projetos</a>.</p>
+
+<h2>Responsável pelos projetos</h2>
 <p>Os projetos e serviços deste site são feitos e mantidos por mim. Os que envolvem pagamento, como o Recadin, são operados por mim como <b>MEI</b>, e a comissão desses pagamentos é recebida pelo meu CNPJ.</p>
-<dl><dt>responsável</dt><dd>Matheus (teuzin0dev)</dd><dt>CNPJ (MEI)</dt><dd>55.730.362/0001-20</dd></dl>
-<p style="margin-top:10px;font-size:.92rem;color:var(--apagado)">Dados de privacidade e termos de cada projeto estão nas respectivas páginas, como em <a href="https://www.teuzin.com.br/TeuzinBetterChat/termos.html">TeuzinBetterChat</a>.</p>
-<h2>O Teyo e a matilha</h2>
-<p>O Teyo é a minha sona, um lobo cinza de cabelo roxo, e é a identidade visual do canal e dos projetos. Sou furry desde que me lembro e a comunidade me recebeu de braços abertos; por isso mostro essa parte de mim nas lives. A comunidade se chama <b>matilha</b>, e quem chega é bem-vindo.</p>
-<h2>Vamos conversar?</h2>
-<p>Passa na <a href="https://twitch.tv/teuzin0dev">live</a>, entra no <a href="https://discord.gg/UPSSNs3xTZ">Discord</a> ou me chama em qualquer rede ao lado.</p>
-</main>
-<aside class="lado">
-<section class="f"><img class="sona" src="assets/Img/teyo.png" alt="Teyo, lobo cinza de cabelo roxo e olhos de cores diferentes"></section><section class="f"><h2 style="margin-top:0">Ficha do Teyo</h2>
-<dl><dt>espécie</dt><dd>lobo</dd><dt>pelo</dt><dd>cinza</dd><dt>cabelo</dt><dd>roxo</dd><dt>olhos</dt><dd>um amarelo, um verde</dd><dt>cor</dt><dd>roxo, sempre</dd></dl></section><section class="f">
-<ul class="lista">
-<li><a href="https://twitch.tv/teuzin0dev"><b>Twitch</b><span>as lives</span></a></li>
-<li><a href="https://discord.gg/UPSSNs3xTZ"><b>Discord</b><span>vem trocar ideia</span></a></li>
-<li><a href="https://instagram.com/teuzin0dev"><b>Instagram</b><span>@teuzin0dev</span></a></li>
-<li><a href="https://x.com/teuzin0dev"><b>X</b><span>@teuzin0dev</span></a></li>
-<li><a href="https://steamcommunity.com/id/dieguesmosken/"><b>Steam</b><span>me adiciona</span></a></li>
-<li><a href="https://github.com/dieguesmosken"><b>GitHub</b><span>código</span></a></li>
-<li><a href="https://t.me/TeuzinYTBR"><b>Telegram</b><span>@TeuzinYTBR</span></a></li>
-</ul></section>
-</aside>
-</div>
-<footer class="f pix">
-<div><b>Apoie o canal</b><br><span>meta atual: câmera e iluminação novas para as lives</span></div>
-<a class="btn" href="https://livepix.gg/teuzin0dev">LivePix</a>
-</footer>
-<p class="rodape">© teuzin0dev · desenvolvido por Matheus · <a href="https://teuzin0dev.statuspage.io">status dos projetos</a></p>
+<dl class="info"><dt>Responsável</dt><dd>Matheus Mosken Diegues (teuzin0dev)</dd><dt>CNPJ (MEI)</dt><dd>55.730.362/0001-20</dd></dl>
+<p style="margin-top:14px;font-size:14.5px;color:var(--muted)">Políticas de privacidade e termos de uso de cada projeto ficam nas respectivas páginas, como em <a href="https://www.teuzin.com.br/TeuzinBetterChat/termos.html">TeuzinBetterChat</a>.</p>
+
+<h2>A identidade do canal</h2>
+<div class="aside-box">
+<img src="assets/Img/teyo-icon.png" alt="Teyo, mascote do canal">
+<p>O <b>Teyo</b>, um lobo cinza de cabelo roxo, é a mascote do canal e a identidade visual dos meus projetos. A comunidade das lives se chama <b>matilha</b>.</p>
 </div>
 
+<h2>Contato</h2>
+<p>Me chame pelo <a href="https://github.com/dieguesmosken">GitHub</a>, <a href="https://instagram.com/teuzin0dev">Instagram</a>, <a href="https://t.me/TeuzinYTBR">Telegram</a> ou por qualquer canal da <a href="index.html#contato">página inicial</a>.</p>
+</div></section>
+</main>
+<footer><div class="wrap">
+<span>© 2026 Matheus Mosken Diegues · teuzin0dev</span>
+<nav><a href="https://github.com/dieguesmosken">GitHub</a><a href="https://twitch.tv/teuzin0dev">Twitch</a><a href="archive/index.html">Arquivo</a><a href="https://teuzin0dev.statuspage.io">Status dos projetos</a></nav>
+</div></footer>
 </body>
 </html>

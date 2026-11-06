@@ -3,90 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Projetos · teuzin0dev</title>
-<meta name="description" content="Projetos do teuzin0dev: Recadin, TeuzinBetterChat, OverlayKit e o jogo Expedição Abissal, feitos pra quem faz live.">
-<meta property="og:title" content="Programação · teuzin0dev">
-<meta property="og:description" content="Ferramentas gratuitas pra streamers: chat pro OBS e overlay editável.">
-<meta property="og:image" content="https://www.teuzin.com.br/assets/Img/teyo.png">
+<title>Projetos · Matheus Mosken Diegues</title>
+<meta name="description" content="Projetos de Matheus Mosken Diegues: Recadin, TeuzinBetterChat, OverlayKit e Expedição Abissal, aplicações web para criadores de conteúdo.">
+<meta name="author" content="Matheus Mosken Diegues">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Projetos · Matheus Mosken Diegues">
+<meta property="og:description" content="Projetos de Matheus Mosken Diegues: Recadin, TeuzinBetterChat, OverlayKit e Expedição Abissal, aplicações web para criadores de conteúdo.">
+<meta property="og:image" content="https://www.teuzin.com.br/assets/Img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0716">
 <link rel="icon" href="assets/Img/teyo-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=1">
 </head>
 <body>
-<div class="pagina">
-<header class="f topo">
-<a class="quem" href="index.html"><img src="assets/Img/teyo-icon.png" alt=""><span><b>teuzin0dev</b><small>twitch.tv/teuzin0dev</small></span></a>
-<nav><a href="sobre.html">sobre mim</a><a href="lives.html">lives</a><a href="programacao.html">programação</a><a class=on href="projetos.html">projetos</a><a href="archive/index.html">arquivo</a></nav>
-</header>
-<div class="corpo">
-<main class="f">
-<h1 class="grande">Meus <em>projetos</em></h1>
-<p class="sub">ferramentas que fiz pras lives, de graça pra quem quiser usar</p>
-<p>Comecei fazendo essas coisas pro meu canal e acabei deixando abertas pra qualquer streamer. Tudo roda direto no navegador, sem instalar nada, e funciona como fonte de navegador no OBS.</p>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html"><img src="assets/Img/teyo-icon.png" alt="">Matheus Mosken Diegues<small>· teuzin0dev</small></a>
+<nav class="menu" id="menu"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html" class="on">Projetos</a><a href="programacao.html">Tecnologias</a><a href="lives.html">Lives</a></nav>
+<a class="btn sm cta" href="index.html#contato">Contato</a>
+<button class="burger" aria-label="Abrir menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+</div></header>
+<main>
+<div class="page-head"><div class="wrap">
+<div class="eyebrow">Projetos</div>
+<h1>Projetos</h1>
+<p>Aplicações que criei para o meu canal e depois abri para outros criadores. Tudo roda direto no navegador, sem instalação, e funciona como fonte de navegador no OBS.</p>
+</div></div>
+
+<section><div class="wrap">
 
 <article class="proj">
 <a class="shot" href="https://recadin.com.br"><img src="assets/Img/projetos/recadin-demo.jpg" alt="Recadin: recado de Pix aparecendo no overlay da live" loading="lazy"></a>
-<div class="info">
-<h2>Recadin</h2>
-<p>Quem assiste manda um Pix e o recado aparece no OBS da live: lido por voz de IA, com som, vídeo ou a música pedida. O dinheiro cai direto na conta do Mercado Pago do streamer. Inclui metas, personalização do visual e fila de moderação para aprovar, pular ou recusar cada recado.</p>
-<ul class="tags"><li>Pix</li><li>voz de IA</li><li>moderação</li><li>metas</li><li>Mercado Pago</li></ul>
-<p class="acoes"><a class="btn" href="https://recadin.com.br">Conhecer o Recadin</a></p>
-<p style="font-size:.9rem;opacity:.85">Em beta fechado para streamers da Twitch: o acesso é pedido com a conta da Twitch.</p>
+<div>
+<h3>Recadin <span class="badge">Beta fechado</span></h3>
+<p>Quem assiste manda um Pix e o recado aparece no OBS da live: lido por voz de IA, com som, vídeo ou a música pedida. O valor cai direto na conta Mercado Pago do streamer. Inclui metas, personalização do visual e fila de moderação para aprovar, pular ou recusar cada recado.</p>
+<ul class="tags"><li>Pix</li><li>Mercado Pago</li><li>Voz de IA</li><li>Moderação</li><li>Metas</li></ul>
+<div class="acts"><a class="btn" href="https://recadin.com.br">Conhecer o Recadin</a></div>
+<p class="note">Acesso para streamers da Twitch, solicitado com a conta da Twitch.</p>
 </div>
 </article>
 
 <article class="proj">
 <a class="shot" href="https://www.teuzin.com.br/TeuzinBetterChat/config-chat.html"><img src="assets/Img/projetos/chat-config.jpg" alt="Configurador do TeuzinBetterChat" loading="lazy"></a>
-<div class="info">
-<h2>TeuzinBetterChat</h2>
-<p>Chat da Twitch bonito pro OBS, sem login e sem servidor. Você ajusta tudo num configurador e copia o link.</p>
-<ul class="tags"><li>fotos dos usuários</li><li>emotes 7TV/BTTV/FFZ</li><li>filtro de bots</li><li>esconde comandos</li></ul>
-<p class="acoes"><a class="btn" href="https://www.teuzin.com.br/TeuzinBetterChat/config-chat.html">Abrir configurador</a> <a class="btn sec" href="https://github.com/dieguesmosken/TeuzinBetterChat">Código</a></p>
+<div>
+<h3>TeuzinBetterChat</h3>
+<p>Chat da Twitch para OBS, sem login e sem servidor. Todas as opções são ajustadas num configurador visual e o resultado é um link pronto para usar como fonte de navegador. Inclui o overlay <b>Clip do !so</b>, que reproduz um clip do canal indicado.</p>
+<ul class="tags"><li>Fotos dos usuários</li><li>Emotes 7TV/BTTV/FFZ</li><li>Filtro de bots</li><li>Multichat Kick e YouTube</li></ul>
+<div class="acts"><a class="btn" href="https://www.teuzin.com.br/TeuzinBetterChat/config-chat.html">Abrir configurador</a><a class="btn ghost" href="https://github.com/dieguesmosken/TeuzinBetterChat">Código-fonte</a></div>
 </div>
 </article>
 
 <article class="proj">
 <a class="shot" href="https://www.teuzin.com.br/OverlayKit/editor.html"><img src="assets/Img/projetos/overlaykit-editor.jpg" alt="Editor visual do OverlayKit" loading="lazy"></a>
-<div class="info">
-<h2>OverlayKit</h2>
-<p>Overlay de live que você monta arrastando: quadros, câmera, chat, relógio, contagem regressiva, meta e frases. Tem 19 cenas prontas, na horizontal e na vertical.</p>
-<ul class="tags"><li>editor visual</li><li>19 modelos</li><li>temas de cor</li><li>PT e EN</li></ul>
-<p class="acoes"><a class="btn" href="https://www.teuzin.com.br/OverlayKit/editor.html">Abrir editor</a> <a class="btn sec" href="https://github.com/dieguesmosken/OverlayKit">Código</a></p>
+<div>
+<h3>OverlayKit</h3>
+<p>Editor de overlays para lives montado com arrastar e soltar: quadros, câmera, chat, relógio, contagem regressiva, metas e frases. São 19 cenas prontas, na horizontal e na vertical.</p>
+<ul class="tags"><li>Editor visual</li><li>19 modelos</li><li>Temas de cor</li><li>PT e EN</li></ul>
+<div class="acts"><a class="btn" href="https://www.teuzin.com.br/OverlayKit/editor.html">Abrir editor</a><a class="btn ghost" href="https://github.com/dieguesmosken/OverlayKit">Código-fonte</a></div>
 <div class="mini"><img src="assets/Img/projetos/overlaykit-jogo.jpg" alt="Modelo de jogo" loading="lazy"><img src="assets/Img/projetos/overlaykit-madrugada.jpg" alt="Modelo madrugada" loading="lazy"><img src="assets/Img/projetos/overlaykit-afk.jpg" alt="Modelo já volto" loading="lazy"></div>
 </div>
 </article>
 
 <article class="proj">
 <a class="shot" href="https://expedicao-abissal.vercel.app"><img src="assets/Img/projetos/expedicao-overlay.jpg" alt="Overlay da Expedição Abissal com a tripulação votando" loading="lazy"></a>
-<div class="info">
-<h2>Expedição Abissal</h2>
-<p>Jogo pro chat da Twitch: a galera embarca num submarino, vota no caminho a cada parada e decide a hora de subir antes do casco ceder. Tem modo solo com <b>!mergulhar</b>, inventário, oficina e ranking no site, e roda na nuvem, sem instalar nada.</p>
-<ul class="tags"><li>overlay pro OBS</li><li>bot no chat</li><li>6 raridades</li><li>fusão e fabricação</li></ul>
-<p class="acoes"><a class="btn" href="https://expedicao-abissal.vercel.app">Abrir o site</a> <a class="btn sec" href="https://teuzin0dev.statuspage.io">Status</a></p>
-<p style="font-size:.9rem;opacity:.85">Em beta fechado: streamer que quiser testar pede acesso no painel do site.</p>
+<div>
+<h3>Expedição Abissal <span class="badge">Beta fechado</span></h3>
+<p>Jogo cooperativo para o chat da Twitch: os espectadores embarcam num submarino, votam no caminho a cada parada e decidem a hora de subir antes do casco ceder. Tem modo solo com <b>!mergulhar</b>, além de inventário, oficina e ranking no site. Roda na nuvem, sem instalar nada.</p>
+<ul class="tags"><li>Overlay para OBS</li><li>Bot no chat</li><li>6 raridades</li><li>Fusão e fabricação</li></ul>
+<div class="acts"><a class="btn" href="https://expedicao-abissal.vercel.app">Abrir o site</a><a class="btn ghost" href="https://teuzin0dev.statuspage.io">Status</a></div>
+<p class="note">Streamers interessados em testar pedem acesso pelo painel do site.</p>
 <div class="mini"><img src="assets/Img/projetos/expedicao-site.jpg" alt="Página inicial do site do jogo" loading="lazy"><img src="assets/Img/projetos/expedicao-inventario.jpg" alt="Inventário com equipamentos" loading="lazy"><img src="assets/Img/projetos/expedicao-demo.jpg" alt="Tripulação no overlay" loading="lazy"></div>
 </div>
 </article>
 
-<h2>Mais coisa</h2>
-<p>Os joguinhos antigos, como o <a href="archive/jogos/PACMAN-JS/index.html">Pac-Man</a>, estão no <a href="archive/index.html">arquivo</a>, e o resto do código está no <a href="https://github.com/dieguesmosken">GitHub</a>.</p>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">Mais trabalhos</div>
+<h2 class="sec-title">Arquivo e código</h2>
+<p class="sec-lead" style="margin-bottom:0">Projetos mais antigos, como o <a href="archive/jogos/PACMAN-JS/index.html">Pac-Man em JavaScript puro</a>, estão no <a href="archive/index.html">arquivo</a>. O restante do código está no <a href="https://github.com/dieguesmosken">GitHub</a>.</p>
+</div></section>
 </main>
-<aside class="lado">
-<section class="f"><img class="sona" src="assets/Img/teyo.png" alt="Teyo, lobo cinza de cabelo roxo e olhos de cores diferentes"></section><section class="f">
-<ul class="lista">
-<li><a href="https://twitch.tv/teuzin0dev"><b>Twitch</b><span>as lives</span></a></li>
-<li><a href="https://discord.gg/UPSSNs3xTZ"><b>Discord</b><span>vem trocar ideia</span></a></li>
-<li><a href="https://instagram.com/teuzin0dev"><b>Instagram</b><span>@teuzin0dev</span></a></li>
-<li><a href="https://x.com/teuzin0dev"><b>X</b><span>@teuzin0dev</span></a></li>
-<li><a href="https://steamcommunity.com/id/dieguesmosken/"><b>Steam</b><span>me adiciona</span></a></li>
-<li><a href="https://github.com/dieguesmosken"><b>GitHub</b><span>código</span></a></li>
-<li><a href="https://t.me/TeuzinYTBR"><b>Telegram</b><span>@TeuzinYTBR</span></a></li>
-</ul></section>
-</aside>
-</div>
-<footer class="f pix">
-<div><b>Apoie o canal</b><br><span>meta atual: câmera e iluminação novas para as lives</span></div>
-<a class="btn" href="https://livepix.gg/teuzin0dev">LivePix</a>
-</footer>
-<p class="rodape">© teuzin0dev · desenvolvido por Matheus · <a href="https://teuzin0dev.statuspage.io">status dos projetos</a></p>
-</div>
+<footer><div class="wrap">
+<span>© 2026 Matheus Mosken Diegues · teuzin0dev</span>
+<nav><a href="https://github.com/dieguesmosken">GitHub</a><a href="https://twitch.tv/teuzin0dev">Twitch</a><a href="archive/index.html">Arquivo</a><a href="https://teuzin0dev.statuspage.io">Status dos projetos</a></nav>
+</div></footer>
+</body>
+</html>

@@ -3,69 +3,147 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matheus · teuzin0dev · desenvolvedor e streamer</title>
-<meta name="description" content="Matheus, 24 anos, dev e streamer furry. Lives na Twitch, programação e o Teyo, minha sona.">
-<meta property="og:title" content="teuzin0dev · Matheus">
-<meta property="og:description" content="Matheus, 24 anos, dev e streamer furry. Lives na Twitch, programação e o Teyo, minha sona.">
-<meta property="og:image" content="https://www.teuzin.com.br/assets/Img/teyo.png">
+<title>Matheus Mosken Diegues · Desenvolvedor Front-end</title>
+<meta name="description" content="Desenvolvedor front-end certificado em Checkout Pro pelo Mercado Pago. Crio aplicações web, integrações de pagamento e ferramentas para criadores de conteúdo.">
+<meta name="author" content="Matheus Mosken Diegues">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Matheus Mosken Diegues · Desenvolvedor Front-end">
+<meta property="og:description" content="Desenvolvedor front-end certificado em Checkout Pro pelo Mercado Pago. Crio aplicações web, integrações de pagamento e ferramentas para criadores de conteúdo.">
+<meta property="og:image" content="https://www.teuzin.com.br/assets/Img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0716">
 <link rel="icon" href="assets/Img/teyo-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=1">
 </head>
 <body>
-<div class="pagina">
-<header class="f topo">
-<a class="quem" href="index.html"><img src="assets/Img/teyo-icon.png" alt=""><span><b>teuzin0dev</b><small>twitch.tv/teuzin0dev</small></span></a>
-<nav><a href="sobre.html">sobre mim</a><a href="lives.html">lives</a><a href="programacao.html">programação</a><a href="projetos.html">projetos</a><a href="archive/index.html">arquivo</a></nav>
-</header>
-<div class="corpo">
-<main class="f">
-<img class="banner" src="assets/Img/banners/home.jpg" alt="teuzin0dev, dev streamer furry" width="1200" height="300">
-<h1 class="grande">Oi, eu sou o <em>Matheus</em></h1>
-<p class="sub">Desenvolvedor front-end · streamer · criador de ferramentas para lives</p>
-<p>Programo com foco em front-end e faço transmissões na Twitch. Boa parte do que construo nasce de uma necessidade real do meu canal e depois é aberta para outros streamers usarem de graça.</p>
-<p>O Teyo, minha sona, é a identidade visual do canal e da comunidade, a matilha.</p>
-<ul class="chips"><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Node.js</li><li>Python</li><li>C#</li><li>Java</li></ul>
-<div class="numeros">
-<div><b>FATEC</b><span>graduando em Desenvolvimento de Software Multiplataforma</span></div>
-<div><b>Open source</b><span>ferramentas gratuitas para streamers</span></div>
-<div><b>Twitch</b><span>lives de jogos, bate-papo e programação</span></div>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html"><img src="assets/Img/teyo-icon.png" alt="">Matheus Mosken Diegues<small>· teuzin0dev</small></a>
+<nav class="menu" id="menu"><a href="index.html" class="on">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="programacao.html">Tecnologias</a><a href="lives.html">Lives</a></nav>
+<a class="btn sm cta" href="index.html#contato">Contato</a>
+<button class="burger" aria-label="Abrir menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+</div></header>
+<main>
+<section class="hero"><div class="wrap">
+<div>
+<div class="eyebrow">Desenvolvedor Front-end</div>
+<h1>Olá, eu sou o <span>Matheus</span>.</h1>
+<p class="role">Front-end, integrações de pagamento e ferramentas para streaming.</p>
+<p class="lead">Desenvolvo aplicações web do zero, da interface à integração com APIs de terceiros. Boa parte do meu trabalho nasce de necessidades reais de criadores de conteúdo e vira ferramenta pública e gratuita.</p>
+<div class="actions">
+<a class="btn" href="projetos.html">Ver projetos</a>
+<a class="btn ghost" href="https://github.com/dieguesmosken">GitHub</a>
+<a class="btn ghost" href="#contato">Entrar em contato</a>
 </div>
-<h2>Projetos em destaque</h2>
-<div class="destaque">
-<a href="https://recadin.com.br"><img src="assets/Img/projetos/recadin-demo.jpg" alt="Recadin: recado por Pix aparecendo na live" loading="lazy"><span><b>Recadin</b><small>o Pix do público vira recado na live</small></span></a>
-<a href="https://www.teuzin.com.br/TeuzinBetterChat/config-chat.html"><img src="assets/Img/projetos/chat-demo.jpg" alt="Chat pro OBS" loading="lazy"><span><b>TeuzinBetterChat</b><small>chat bonito pro OBS, com fotos</small></span></a>
-<a href="https://www.teuzin.com.br/OverlayKit/editor.html"><img src="assets/Img/projetos/overlaykit-jogo.jpg" alt="Overlay editável" loading="lazy"><span><b>OverlayKit</b><small>monte seu overlay arrastando</small></span></a>
-<a href="https://expedicao-abissal.vercel.app"><img src="assets/Img/projetos/expedicao-demo.jpg" alt="Expedição Abissal no overlay da live" loading="lazy"><span><b>Expedição Abissal</b><small>jogo de submarino pro chat da live</small></span></a>
 </div>
-<p style="margin-top:10px"><a href="projetos.html">ver todos os projetos →</a></p>
-<h2>Navegue pelo site</h2>
-<ul class="lista">
-<li><a href="sobre.html"><b>Sobre mim</b><span>trajetória e interesses</span></a></li>
-<li><a href="lives.html"><b>Lives</b><span>onde, quando e a meta</span></a></li>
-<li><a href="programacao.html"><b>Programação</b><span>tecnologias e repositórios</span></a></li>
-<li><a href="archive/jogos/PACMAN-JS/index.html"><b>Pac-Man em JavaScript</b><span>projeto antigo, jogável no navegador</span></a></li>
-</ul>
-</main>
-<aside class="lado">
-<section class="f"><img class="sona" src="assets/Img/teyo.png" alt="Teyo, lobo cinza de cabelo roxo e olhos de cores diferentes"></section><section class="f legenda"><b>Teyo</b><span>minha sona</span></section><section class="f">
-<ul class="lista">
-<li><a href="https://twitch.tv/teuzin0dev"><b>Twitch</b><span>as lives</span></a></li>
-<li><a href="https://discord.gg/UPSSNs3xTZ"><b>Discord</b><span>vem trocar ideia</span></a></li>
-<li><a href="https://instagram.com/teuzin0dev"><b>Instagram</b><span>@teuzin0dev</span></a></li>
-<li><a href="https://x.com/teuzin0dev"><b>X</b><span>@teuzin0dev</span></a></li>
-<li><a href="https://steamcommunity.com/id/dieguesmosken/"><b>Steam</b><span>me adiciona</span></a></li>
-<li><a href="https://github.com/dieguesmosken"><b>GitHub</b><span>código</span></a></li>
-<li><a href="https://t.me/TeuzinYTBR"><b>Telegram</b><span>@TeuzinYTBR</span></a></li>
-</ul></section>
-</aside>
+<div class="code" aria-hidden="true">
+<div class="bar"><i></i><i></i><i></i><b>dev.js</b></div>
+<pre><span class="k">const</span> dev = {
+  nome: <span class="s">'Matheus Mosken Diegues'</span>,
+  foco: [<span class="s">'front-end'</span>, <span class="s">'pagamentos'</span>],
+  stack: [<span class="s">'React'</span>, <span class="s">'Next.js'</span>, <span class="s">'Node.js'</span>],
+  certificado: <span class="s">'Checkout Pro'</span>,
+  openSource: <span class="n">true</span>,
+};</pre>
 </div>
-<footer class="f pix">
-<div><b>Apoie o canal</b><br><span>meta atual: câmera e iluminação novas para as lives</span></div>
-<a class="btn" href="https://livepix.gg/teuzin0dev">LivePix</a>
-</footer>
-<p class="rodape">© teuzin0dev · desenvolvido por Matheus · <a href="https://teuzin0dev.statuspage.io">status dos projetos</a></p>
 </div>
+<div class="wrap"><div class="stats">
+<div class="stat"><b>Certificado Checkout Pro</b><span>Mercado Pago Developers · 2026</span></div>
+<div class="stat"><b>4 ferramentas publicadas</b><span>para criadores de conteúdo na Twitch</span></div>
+<div class="stat"><b>Open source</b><span>código aberto no GitHub</span></div>
+</div></div>
+</section>
 
+<section id="projetos"><div class="wrap">
+<div class="eyebrow">Projetos</div>
+<h2 class="sec-title">Trabalhos em destaque</h2>
+<p class="sec-lead">Aplicações web que rodam direto no navegador, com foco em experiência de uso, integração com APIs e desempenho em transmissões ao vivo.</p>
+<div class="grid">
+<article class="card">
+<a class="shot" href="https://recadin.com.br"><img src="assets/Img/projetos/recadin-demo.jpg" alt="Recadin: recado por Pix aparecendo na live" loading="lazy"></a>
+<div class="body">
+<h3>Recadin <span class="badge">Beta</span></h3>
+<p>Plataforma em que o público manda um Pix e o recado aparece na live, lido por voz de IA. Pagamento direto na conta Mercado Pago do streamer, com metas e fila de moderação.</p>
+<ul class="tags"><li>Pix</li><li>Mercado Pago</li><li>Voz de IA</li></ul>
+<div class="acts"><a class="btn sm" href="https://recadin.com.br">Conhecer</a></div>
+</div>
+</article>
+<article class="card">
+<a class="shot" href="https://www.teuzin.com.br/TeuzinBetterChat/config-chat.html"><img src="assets/Img/projetos/chat-demo.jpg" alt="TeuzinBetterChat no OBS" loading="lazy"></a>
+<div class="body">
+<h3>TeuzinBetterChat</h3>
+<p>Chat da Twitch para OBS com emotes 7TV/BTTV/FFZ, filtro de bots e multichat com Kick e YouTube. Sem login e sem servidor: tudo é configurado num painel e vira um link.</p>
+<ul class="tags"><li>JavaScript</li><li>API da Twitch</li><li>OBS</li></ul>
+<div class="acts"><a class="btn sm" href="https://www.teuzin.com.br/TeuzinBetterChat/config-chat.html">Abrir</a><a class="btn sm ghost" href="https://github.com/dieguesmosken/TeuzinBetterChat">Código</a></div>
+</div>
+</article>
+<article class="card">
+<a class="shot" href="https://www.teuzin.com.br/OverlayKit/editor.html"><img src="assets/Img/projetos/overlaykit-jogo.jpg" alt="Overlay criado no OverlayKit" loading="lazy"></a>
+<div class="body">
+<h3>OverlayKit</h3>
+<p>Editor visual de overlays para lives, com arrastar e soltar e 19 modelos prontos nas orientações horizontal e vertical, em português e inglês.</p>
+<ul class="tags"><li>Editor visual</li><li>JavaScript</li><li>CSS</li></ul>
+<div class="acts"><a class="btn sm" href="https://www.teuzin.com.br/OverlayKit/editor.html">Abrir</a><a class="btn sm ghost" href="https://github.com/dieguesmosken/OverlayKit">Código</a></div>
+</div>
+</article>
+<article class="card">
+<a class="shot" href="https://expedicao-abissal.vercel.app"><img src="assets/Img/projetos/expedicao-demo.jpg" alt="Expedição Abissal no overlay da live" loading="lazy"></a>
+<div class="body">
+<h3>Expedição Abissal <span class="badge">Beta</span></h3>
+<p>Jogo cooperativo jogado pelo chat da Twitch, com overlay para OBS, bot no chat e site com inventário, oficina e ranking. Roda na nuvem, sem instalar nada.</p>
+<ul class="tags"><li>Bot de chat</li><li>Overlay</li><li>Vercel</li></ul>
+<div class="acts"><a class="btn sm" href="https://expedicao-abissal.vercel.app">Abrir</a></div>
+</div>
+</article>
+</div>
+<p style="margin-top:26px"><a href="projetos.html">Ver detalhes de todos os projetos →</a></p>
+</div></section>
+
+<section id="certificacoes"><div class="wrap">
+<div class="eyebrow">Certificações</div>
+<h2 class="sec-title">Credenciais</h2>
+<div class="cert" style="margin-top:24px">
+<a href="assets/certificados/mercado-pago-checkout-pro.pdf"><img src="assets/certificados/mercado-pago-checkout-pro.svg" alt="Insígnia Certificado Checkout Pro"></a>
+<div>
+<h3>Checkout Pro · Mercado Pago Developers</h3>
+<p>Integração de pagamentos online com Checkout Pro: criação de preferências, regras de meios de pagamento e parcelamento, URLs de retorno, notificações via webhook e identificação de transações.</p>
+<p style="margin:0"><a class="btn sm ghost" href="assets/certificados/mercado-pago-checkout-pro.pdf">Ver certificado</a> &nbsp;<code>cert_3bb44b68da3511f193486203702d6ec2</code></p>
+</div>
+</div>
+</div></section>
+
+<section id="tecnologias"><div class="wrap">
+<div class="eyebrow">Tecnologias</div>
+<h2 class="sec-title">Com o que eu trabalho</h2>
+<p class="sec-lead">Meu foco é front-end, com back-end em Node.js quando o projeto pede.</p>
+<div class="skills">
+<div class="skill"><h3>Front-end</h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Tailwind</li></ul></div>
+<div class="skill"><h3>Back-end</h3><ul><li>Node.js</li><li>Express</li><li>Python</li><li>PHP</li><li>MySQL</li></ul></div>
+<div class="skill"><h3>Integrações</h3><ul><li>Mercado Pago</li><li>Pix</li><li>API da Twitch</li><li>Webhooks</li></ul></div>
+<div class="skill"><h3>Infra e ferramentas</h3><ul><li>Git</li><li>GitHub Pages</li><li>Vercel</li><li>Cloudflare Workers</li><li>OBS Studio</li></ul></div>
+</div>
+</div></section>
+
+<section id="contato"><div class="wrap contact">
+<div>
+<div class="eyebrow">Contato</div>
+<h2 class="sec-title">Vamos conversar</h2>
+<p class="sec-lead" style="margin-bottom:0">Para projetos, integrações ou dúvidas sobre as ferramentas, me chame por qualquer um destes canais.</p>
+</div>
+<div class="links">
+<a href="https://github.com/dieguesmosken">GitHub <span>dieguesmosken</span></a>
+<a href="https://instagram.com/teuzin0dev">Instagram <span>@teuzin0dev</span></a>
+<a href="https://x.com/teuzin0dev">X <span>@teuzin0dev</span></a>
+<a href="https://t.me/TeuzinYTBR">Telegram <span>@TeuzinYTBR</span></a>
+<a href="https://discord.gg/UPSSNs3xTZ">Discord <span>comunidade</span></a>
+<a href="https://twitch.tv/teuzin0dev">Twitch <span>teuzin0dev</span></a>
+</div>
+</div></section>
+</main>
+<footer><div class="wrap">
+<span>© 2026 Matheus Mosken Diegues · teuzin0dev</span>
+<nav><a href="https://github.com/dieguesmosken">GitHub</a><a href="https://twitch.tv/teuzin0dev">Twitch</a><a href="archive/index.html">Arquivo</a><a href="https://teuzin0dev.statuspage.io">Status dos projetos</a></nav>
+</div></footer>
 </body>
 </html>

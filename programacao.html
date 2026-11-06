@@ -3,63 +3,77 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Programação · teuzin0dev</title>
-<meta name="description" content="Projetos e tecnologias do Matheus.">
-<meta property="og:title" content="Programação · teuzin0dev">
-<meta property="og:description" content="Projetos e tecnologias do Matheus.">
-<meta property="og:image" content="https://www.teuzin.com.br/assets/Img/teyo.png">
+<title>Tecnologias · Matheus Mosken Diegues</title>
+<meta name="description" content="Tecnologias, certificações e repositórios de Matheus Mosken Diegues, desenvolvedor front-end.">
+<meta name="author" content="Matheus Mosken Diegues">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tecnologias · Matheus Mosken Diegues">
+<meta property="og:description" content="Tecnologias, certificações e repositórios de Matheus Mosken Diegues, desenvolvedor front-end.">
+<meta property="og:image" content="https://www.teuzin.com.br/assets/Img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0b0716">
 <link rel="icon" href="assets/Img/teyo-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=7">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=1">
 </head>
 <body>
-<div class="pagina">
-<header class="f topo">
-<a class="quem" href="index.html"><img src="assets/Img/teyo-icon.png" alt=""><span><b>teuzin0dev</b><small>twitch.tv/teuzin0dev</small></span></a>
-<nav><a href="sobre.html">sobre mim</a><a href="lives.html">lives</a><a class=on href="programacao.html">programação</a><a href="projetos.html">projetos</a><a href="archive/index.html">arquivo</a></nav>
-</header>
-<div class="corpo">
-<main class="f">
-<img class="banner" src="assets/Img/banners/programacao.jpg" alt="Programação" width="1200" height="300">
-<h1 class="grande">Progra<em>mação</em></h1>
-<p class="sub">front-end, principalmente</p>
-<p>Estou na graduação de Desenvolvimento de Software Multiplataforma e mexo mais com site e interface. Uso HTML, CSS, JavaScript, TypeScript, React, Next.js e Tailwind, e Git pra tudo.</p>
-<h2>Projetos</h2>
-<p>Fiz o <a href="projetos.html">TeuzinBetterChat e o OverlayKit</a>, ferramentas gratuitas pra quem faz live. Dá uma olhada na página de projetos.</p>
-<h2>Repositórios recentes</h2>
-<div class="repos" id="repos"><span>carregando…</span></div>
-<h2>Joguinhos</h2>
-<p>No <a href="archive/index.html">arquivo</a> tem uns jogos que fiz. O <a href="archive/jogos/PACMAN-JS/index.html">Pac-Man</a> está completo, com fantasmas, fases e recorde.</p>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html"><img src="assets/Img/teyo-icon.png" alt="">Matheus Mosken Diegues<small>· teuzin0dev</small></a>
+<nav class="menu" id="menu"><a href="index.html">Início</a><a href="sobre.html">Sobre</a><a href="projetos.html">Projetos</a><a href="programacao.html" class="on">Tecnologias</a><a href="lives.html">Lives</a></nav>
+<a class="btn sm cta" href="index.html#contato">Contato</a>
+<button class="burger" aria-label="Abrir menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+</div></header>
+<main>
+<div class="page-head"><div class="wrap">
+<div class="eyebrow">Tecnologias</div>
+<h1>Stack e código</h1>
+<p>Trabalho principalmente com front-end: interfaces rápidas e bem acabadas, com back-end em Node.js e integrações com APIs quando o projeto pede.</p>
+</div></div>
+
+<section><div class="wrap">
+<div class="skills">
+<div class="skill"><h3>Front-end</h3><ul><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Next.js</li><li>Tailwind</li></ul></div>
+<div class="skill"><h3>Back-end</h3><ul><li>Node.js</li><li>Express</li><li>Python</li><li>PHP</li><li>MySQL</li></ul></div>
+<div class="skill"><h3>Integrações</h3><ul><li>Mercado Pago</li><li>Pix</li><li>API da Twitch</li><li>Webhooks</li></ul></div>
+<div class="skill"><h3>Infra e ferramentas</h3><ul><li>Git</li><li>GitHub Pages</li><li>Vercel</li><li>Cloudflare Workers</li><li>OBS Studio</li></ul></div>
+</div>
+<p style="margin-top:18px;color:var(--muted);font-size:14.5px">Também tenho base em C, C# e Java.</p>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">Certificação</div>
+<div class="cert" style="margin-top:6px">
+<a href="assets/certificados/mercado-pago-checkout-pro.pdf"><img src="assets/certificados/mercado-pago-checkout-pro.svg" alt="Insígnia Certificado Checkout Pro"></a>
+<div>
+<h3>Checkout Pro · Mercado Pago Developers</h3>
+<p>Integração de pagamentos online com Checkout Pro: preferências, regras de meios de pagamento e parcelamento, URLs de retorno, notificações via webhook e identificação de transações.</p>
+<p style="margin:0"><a class="btn sm ghost" href="assets/certificados/mercado-pago-checkout-pro.pdf">Ver certificado</a></p>
+</div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="eyebrow">GitHub</div>
+<h2 class="sec-title">Repositórios recentes</h2>
+<p class="sec-lead">Atualizado automaticamente a partir do meu <a href="https://github.com/dieguesmosken">perfil no GitHub</a>.</p>
+<div class="repos" id="repos"><span style="color:var(--muted)">Carregando…</span></div>
+</div></section>
 </main>
-<aside class="lado">
-<section class="f"><img class="sona" src="assets/Img/teyo.png" alt="Teyo, lobo cinza de cabelo roxo e olhos de cores diferentes"></section><section class="f">
-<ul class="lista">
-<li><a href="https://twitch.tv/teuzin0dev"><b>Twitch</b><span>as lives</span></a></li>
-<li><a href="https://discord.gg/UPSSNs3xTZ"><b>Discord</b><span>vem trocar ideia</span></a></li>
-<li><a href="https://instagram.com/teuzin0dev"><b>Instagram</b><span>@teuzin0dev</span></a></li>
-<li><a href="https://x.com/teuzin0dev"><b>X</b><span>@teuzin0dev</span></a></li>
-<li><a href="https://steamcommunity.com/id/dieguesmosken/"><b>Steam</b><span>me adiciona</span></a></li>
-<li><a href="https://github.com/dieguesmosken"><b>GitHub</b><span>código</span></a></li>
-<li><a href="https://t.me/TeuzinYTBR"><b>Telegram</b><span>@TeuzinYTBR</span></a></li>
-</ul></section>
-</aside>
-</div>
-<footer class="f pix">
-<div><b>Apoie o canal</b><br><span>meta atual: câmera e iluminação novas para as lives</span></div>
-<a class="btn" href="https://livepix.gg/teuzin0dev">LivePix</a>
-</footer>
-<p class="rodape">© teuzin0dev · desenvolvido por Matheus · <a href="https://teuzin0dev.statuspage.io">status dos projetos</a></p>
-</div>
 <script>
-fetch('https://api.github.com/users/dieguesmosken/repos?sort=pushed&per_page=14')
+fetch('https://api.github.com/users/dieguesmosken/repos?sort=pushed&per_page=20')
 .then(r=>r.ok?r.json():Promise.reject()).then(l=>{
   const el=document.getElementById('repos');el.textContent='';
-  l.filter(r=>!r.fork&&!r.name.startsWith('skills-')).slice(0,8).forEach(r=>{
+  l.filter(r=>!r.fork&&!r.name.startsWith('skills-')&&r.name!=='dieguesmosken').slice(0,9).forEach(r=>{
     const a=document.createElement('a');a.href=r.html_url;
     const b=document.createElement('b');b.textContent=r.name;
-    const s=document.createElement('small');s.textContent=r.description||r.language||'sem descrição';
+    const s=document.createElement('small');s.textContent=r.description||r.language||'Sem descrição';
     a.append(b,s);el.append(a)})
-}).catch(()=>{document.getElementById('repos').innerHTML='<a href="https://github.com/dieguesmosken?tab=repositories"><b>ver no GitHub</b><small>não consegui carregar a lista agora</small></a>'})
+}).catch(()=>{document.getElementById('repos').innerHTML='<a href="https://github.com/dieguesmosken?tab=repositories"><b>Ver no GitHub</b><small>Não foi possível carregar a lista agora.</small></a>'})
 </script>
+<footer><div class="wrap">
+<span>© 2026 Matheus Mosken Diegues · teuzin0dev</span>
+<nav><a href="https://github.com/dieguesmosken">GitHub</a><a href="https://twitch.tv/teuzin0dev">Twitch</a><a href="archive/index.html">Arquivo</a><a href="https://teuzin0dev.statuspage.io">Status dos projetos</a></nav>
+</div></footer>
 </body>
 </html>
